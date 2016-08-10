@@ -34,7 +34,6 @@
 	}       
 ?>
 
-<?php include_once "common/header.php"; ?>
 <html><head>
     <style>
       html, body {
