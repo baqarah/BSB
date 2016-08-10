@@ -2,33 +2,7 @@
 <?php include_once "common/header.php"; ?>
 <html>
     <style>
-      html, body {
-      height: 100%;
-      }     
-
-      table, td {
-      border: 2px solid black;
-      }
       
-      table {
-      border-collapse: collapse;
-      width: 100%;
-      height: 100%;
-      table-layout: fixed;
-      }
-      
-      th {
-      text-align: center;
-      }
-      
-      td {
-      text-align: center;
-      vertical-align: center;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      font-size: 24px;
-      padding: 0px;
-      }
     </style>
 <body>
 <table id="MyTable">
