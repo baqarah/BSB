@@ -1,5 +1,5 @@
 <head>
     <title>BSBingo</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="shortcut icon"  type"image/x-icon href="icon.ico" />
 </head>
