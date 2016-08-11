@@ -21,6 +21,6 @@ echo "<br><br>";
 
 echo $rows[23]['BSText'];
 echo count($rows);
-echo count($rows[]);
+//echo count($rows[]);
 
 ?>
