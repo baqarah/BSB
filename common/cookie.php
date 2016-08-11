@@ -1,16 +1,31 @@
 <?php
-$cookie_name = "Imie";
+$servername = '89.77.118.160';
+$DB_USERNAME = 'user';
+$DB_PASSWORD = '666number';
+$DB_NAME = 'BSB';
 
+$conn = mysqli_connect($servername, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
+if (!$conn) {
+    die("Failed to connect to MySQL: " .  mysqli_connect_error());
+}
+
+$sql = "SELECT BSText FROM BSB.BShits";
+$result = $conn->query($sql);
+
+while($row = $result->fetch_assoc()) {
+    $rows[] = $row['BSText'];
+}
+
+//Cookie stuff here:
+$cookie_name = "Imie";
 
 $array_cookie = array();
 
 if (!isset($_COOKIE[$cookie_name])) {
-    
-    $path = "data/data.txt";
-    $data_text = file($path);
-    $lines = count($data_text);
+
+    $lines = count($rows);
     $i = 0;
-    $temp_to_splice = $data_text;
+    $temp_to_splice = $rows;
 
     while ($i < 25) {
 	if ($i != 12) { 
@@ -32,5 +47,5 @@ if (!isset($_COOKIE[$cookie_name])) {
 	setcookie($cook_name, $array_cookie[$x], time() + 7200, "/");   
     }
 }
-       
+
 ?>

@@ -52,9 +52,4 @@ if (!isset($_COOKIE[$cookie_name])) {
     }
 }
 
-include 'common/tabela.php';
-
-
-
-
 ?>
