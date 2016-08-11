@@ -17,5 +17,9 @@ while($row = $result->fetch_assoc()) {
 }
 
 print_r($rows);
+echo "<br><br>";
+
+echo $rows[23]['BSText'];
+
 
 ?>
