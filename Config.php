@@ -12,18 +12,8 @@ if (!$conn) {
 $sql = "SELECT BSText FROM BSB.BShits";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    //data output
-    $row = $result->fetch_assoc();
-        
-    foreach ($row as $value) {
-        echo $value;
-    }
+$rows = $result->fetchAll();
 
-    //}
-    
-} else {
-    echo "Nie ma danych :(";
-}
+print_r($rows);
 
 ?>
