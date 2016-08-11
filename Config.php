@@ -16,8 +16,9 @@ if ($result->num_rows > 0) {
     //data output
     $row = $result->fetch_assoc();
         
-        echo "Haslo: " . $row["BSText"] . "<br>";
-    echo $row["BSText"];
+    foreach ($row as $value) {
+        echo $value;
+    }
 
     //}
     
