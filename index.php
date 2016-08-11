@@ -6,7 +6,7 @@
     </style>
     <body>
         <table id="MyTable">
-            <?php include_once 'common/tabela_2.php'; ?>	
+            <?php include_once 'common/tabela.php'; ?>	
         </table>
 
         <br>
