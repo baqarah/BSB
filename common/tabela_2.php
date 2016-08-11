@@ -15,7 +15,7 @@
 <tr>
     <td><?php $_COOKIE["cell10"] ?></td>
     <td><?php $_COOKIE["cell11"] ?></td>
-    <td bgcolor="'red'"><?php $_COOKIE["cell12"] ?></td>
+    <td bgcolor="red"><?php $_COOKIE["cell12"] ?></td>
     <td><?php $_COOKIE["cell13"] ?></td>
     <td><?php $_COOKIE["cell14"] ?></td>
 </tr>
