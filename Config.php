@@ -15,7 +15,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     //data output
     while ($row = $result->fetch_assoc()) {
-        echo "Haslo: " . $row . "<br>";
+        echo "Haslo: " . $row["BSText"] . "<br>";
     }
 } else {
     echo "Nie ma danych :(";
