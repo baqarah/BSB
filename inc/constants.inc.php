@@ -1,5 +1,5 @@
 <?php
- 
+
     // Database credentials
     define('DB_HOST', '89.77.118.160');
     define('DB_USER', 'user');
