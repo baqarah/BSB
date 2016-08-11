@@ -12,7 +12,9 @@ if (!$conn) {
 $sql = "SELECT BSText FROM BSB.BShits";
 $result = $conn->query($sql);
 
-$rows = $result->fetchAll();
+while($row = $result->fetch_assoc()) {
+    $rows[] = $row;
+}
 
 print_r($rows);
 
