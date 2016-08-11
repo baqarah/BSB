@@ -13,7 +13,7 @@ $sql = "SELECT BSText FROM BSB.BShits";
 $result = $conn->query($sql);
 
 while($row = $result->fetch_assoc()) {
-    $rows[] = $row;
+    $rows[] = $row['BSText'];
 }
 
 print_r($rows);
@@ -22,5 +22,9 @@ echo "<br><br>";
 echo $rows[23]['BSText'];
 echo count($rows);
 //echo count($rows[]);
+
+
+
+
 
 ?>
