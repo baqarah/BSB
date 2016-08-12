@@ -16,14 +16,7 @@ class BSBUsers
             $this->_db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
             //echo "connected";
         } 
-    }
-
-    public function test()
-    {
-        return "czy to kurwa dziala?";
-    }
-    
-        
+    }     
     
     public function createAccount()
     {
