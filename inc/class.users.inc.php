@@ -12,14 +12,33 @@ class BSBUsers
     {
         if(is_object($db)) {
             $this->_db = $db;
-            echo "already connected";
         } else {
             $this->_db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-            echo "connected";
+            //echo "connected";
         } 
-
-
     }
+
+    public function createAccount()
+    {
+        $u = trim($_POST['username']);
+        //tak sie robi hashe - nie ebedize to mi narazie potrzebne, ignoruje wysylanie maila
+        //$v = sha1(time());
+        $sql = 'SELECT COUNT(UserName) as theCount FROM BSBUsers WHERE UserName="' .$u.'"';
+
+        $result = $this->_db->query($sql);
+        $row = $result->fetch_assoc();
+        if($row['theCount']!=0){
+            return "<h2> Error</h>"
+                 . "<p> Your account name is already in use. </p>"
+                 . "<p> Try again. Or not.<br> I am not your supervisor </p>"
+        }
+
+        $sql = "INSERT INTO BSBUsers(UserName) VALUES(" .$u. ")";
+        $result = $this->_db->query($sql);
+        //$row = $result->fetch_assoc();
+        //if(
+    }       
+    
 }
 
 ?>

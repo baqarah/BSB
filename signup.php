@@ -12,7 +12,7 @@ if (!empty($_POST['username'])) {
     <h2>Sign up</h2>
     <form method="post" action="signup.php" id="registerform">
         <div>
-            <label for="username">Email:</label>
+            <label for="username">User Name:</label>
             <input type="text" name="username" id="username" /><br>
             <input type="submit" name="register" id="register" value="Sign up" />
         </div>
