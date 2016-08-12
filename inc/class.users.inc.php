@@ -23,24 +23,24 @@ class BSBUsers
     
     
 
-    /**    
-     *
+        
+     
        public function createAccount()
    {
-        $u = trim($_POST['username']);
+        //$u = trim($_POST['username']);
         //tak sie robi hashe - nie ebedize to mi narazie potrzebne, ignoruje wysylanie maila
         //$v = sha1(time());
-        $sql = 'SELECT COUNT(UserName) as theCount FROM Users'; // WHERE UserName="' .$u.'"';
+        //$sql = 'SELECT COUNT(UserName) as theCount FROM Users'; // WHERE UserName="' .$u.'"';
         
-        $result = $this->_db->query($sql);
-        or die("Oh shit, whaddap");
+        //$result = $this->_db->query($sql);
+        //or die("Oh shit, whaddap");
             
-        $row = $result->fetch_assoc();
-        if($row['theCount']!=0){
-            return "<h2> Error</h>"
-                 . "<p> Your account name is already in use. </p>"
-                 . "<p> Try again. Or not.<br> I am not your supervisor </p>";
-        }
+        //$row = $result->fetch_assoc();
+        //if($row['theCount']!=0){
+        //    return "<h2> Error</h>"
+        //         . "<p> Your account name is already in use. </p>"
+        //         . "<p> Try again. Or not.<br> I am not your supervisor </p>";
+        //}
         return "przynajmniej dziala";
         //$sql = "INSERT INTO BSBUsers(UserName) VALUES(" .$u. ")";
         //$result = $this->_db->query($sql);
@@ -48,7 +48,5 @@ class BSBUsers
         //if(
            
     }
-    */
 }
-
 ?>
