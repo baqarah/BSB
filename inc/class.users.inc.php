@@ -5,9 +5,7 @@ class BSBUsers
     //Database object:
     private $_db;
 
-
     //checks for db object and creates one if not found
-
     public function __construct($db=NULL)
     {
         if(is_object($db)) {
@@ -17,9 +15,9 @@ class BSBUsers
             //echo "connected";
         } 
     }     
-    
-    public function createAccount()
-    {
+/**    
+   public function createAccount()
+   {
         $u = trim($_POST['username']);
         //tak sie robi hashe - nie ebedize to mi narazie potrzebne, ignoruje wysylanie maila
         //$v = sha1(time());
@@ -41,6 +39,7 @@ class BSBUsers
         //if(
            
     }
+*/
 }
 
 ?>
