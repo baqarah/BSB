@@ -18,10 +18,10 @@ class BSBUsers
         } 
     }
 
-    //public function test()
-    //{
-    //    return "czy to kurwa dziala?";
-    //}
+    public function test()
+    {
+        return "czy to kurwa dziala?";
+    }
     
         
     
@@ -47,7 +47,7 @@ class BSBUsers
         //$row = $result->fetch_assoc();
         //if(
            
-    //}
+    }
 }
 
 ?>

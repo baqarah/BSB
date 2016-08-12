@@ -5,5 +5,5 @@ include_once "common/base.php";
 
 
 $users = new BSBUsers($db);
-
+echo $users->test();
 ?>
