@@ -27,6 +27,7 @@ class BSBUsers
 
         $result = $this->_db->query($sql);
         $row = $result->fetch_assoc();
+        alert($row['theCount']);
         if($row['theCount']!=0){
             return "<h2> Error</h>"
                  . "<p> Your account name is already in use. </p>"
