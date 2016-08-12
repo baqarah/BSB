@@ -31,9 +31,9 @@ class BSBUsers
        $sql = "SELECT COUNT(UserName) as theCount FROM Users"; // WHERE UserName="' .$u.'"';
         
        $result = $this->_db->query($sql);
-        //or die("Oh shit, whaddap");
+        
             
-        //$row = $result->fetch_assoc();
+        $row = $result->fetch_assoc();
         //if($row['theCount']!=0){
         //    return "<h2> Error</h>"
         //         . "<p> Your account name is already in use. </p>"
