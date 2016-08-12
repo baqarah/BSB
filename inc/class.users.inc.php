@@ -18,8 +18,8 @@ class BSBUsers
         } 
     }
 
-    public function createAccount()
-    {
+    //public function createAccount()
+    //{
         //$u = trim($_POST['username']);
         //tak sie robi hashe - nie ebedize to mi narazie potrzebne, ignoruje wysylanie maila
         //$v = sha1(time());
@@ -31,9 +31,9 @@ class BSBUsers
         //$row = $result->fetch_assoc();
         //alert($row['theCount']);
         //if($row['theCount']!=0){
-            return "<h2> Error</h>"
-                 . "<p> Your account name is already in use. </p>"
-                 . "<p> Try again. Or not.<br> I am not your supervisor </p>"
+        //    return "<h2> Error</h>"
+        //         . "<p> Your account name is already in use. </p>"
+        //         . "<p> Try again. Or not.<br> I am not your supervisor </p>"
         //}
 
         //$sql = "INSERT INTO BSBUsers(UserName) VALUES(" .$u. ")";
@@ -41,7 +41,7 @@ class BSBUsers
         //$row = $result->fetch_assoc();
         //if(
            
-    }
+    //}
 }
 
 ?>
