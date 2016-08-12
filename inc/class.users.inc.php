@@ -23,8 +23,8 @@ class BSBUsers
         $u = trim($_POST['username']);
         //tak sie robi hashe - nie ebedize to mi narazie potrzebne, ignoruje wysylanie maila
         //$v = sha1(time());
-        $sql = 'SELECT COUNT(UserName) as theCount FROM Users WHERE UserName="' .$u.'"';
-
+        $sql = 'SELECT COUNT(UserName) as theCount FROM Users' // WHERE UserName="' .$u.'"';
+        
         $result = $this->_db->query($sql);
         $row = $result->fetch_assoc();
         //alert($row['theCount']);
