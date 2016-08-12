@@ -3,11 +3,11 @@ include_once "common/base.php";
 $pageTitle = "Register";
 include_once "common/header.php";
 
-if (!empty($_POST['username'])) {
+if (!empty($_POST["username"])) {
     include_once "inc/class.users.inc.php";
     $users = new BSBUsers($db);
     echo $users->createAccount();
-    echo $_POST['password'];
+    echo $_POST["password"];
 } else {
 ?>
     <h2>Sign up</h2>

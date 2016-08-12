@@ -20,7 +20,6 @@ print_r($rows);
 
 
 
-
 $cookie_name = "Imie";
 
 $array_cookie = array();
@@ -53,3 +52,4 @@ if (!isset($_COOKIE[$cookie_name])) {
 }
 
 ?>
+
