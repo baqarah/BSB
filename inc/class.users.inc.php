@@ -28,8 +28,9 @@ class BSBUsers
        public function createAccount()
    {
        $u = trim($_POST["username"]);
-       $sql = "SELECT COUNT(UserName) as theCount FROM Users WHERE UserName='TomekKimak'";
-        
+       $u = "TomekKimak";
+       $sql = "SELECT COUNT(UserName) as theCount FROM Users WHERE UserName='" . $u . "'";
+       echo $sql; 
        $result = $this->_db->query($sql);
         
             
