@@ -23,11 +23,11 @@ class BSBUsers
         $u = trim($_POST['username']);
         //tak sie robi hashe - nie ebedize to mi narazie potrzebne, ignoruje wysylanie maila
         //$v = sha1(time());
-        $sql = 'SELECT COUNT(UserName) as theCount FROM BSBUsers WHERE UserName="' .$u.'"';
+        $sql = 'SELECT COUNT(UserName) as theCount FROM Users WHERE UserName="' .$u.'"';
 
         $result = $this->_db->query($sql);
         $row = $result->fetch_assoc();
-        alert($row['theCount']);
+        //alert($row['theCount']);
         if($row['theCount']!=0){
             return "<h2> Error</h>"
                  . "<p> Your account name is already in use. </p>"
