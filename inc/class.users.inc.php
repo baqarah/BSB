@@ -19,16 +19,12 @@ class BSBUsers
     public function testowa()
     {
         return "test pomyslny";
-    }
-    
-    
-
-        
+    }      
      
        public function createAccount()
-   {
+    {
        $u = trim($_POST["username"]);
-       $u = "Tomek";
+       
        $sql = "SELECT COUNT(UserName) as theCount FROM Users WHERE UserName='" . $u . "'";
        echo $sql; 
        $result = $this->_db->query($sql);
