@@ -33,19 +33,17 @@ class BSBUsers
        $result = $this->_db->query($sql);
         
             
-        $row = $result->fetch_assoc();
-        if($row['theCount']!=0){
-        //    return "<h2> Error</h>"
-        //         . "<p> Your account name is already in use. </p>"
-        //         . "<p> Try again. Or not.<br> I am not your supervisor </p>";
-            return "omg dziala";
-        }
+       $row = $result->fetch_assoc();
+       if($row['theCount']!=0){
+            return "<h2> Error</h>"
+                 . "<p> Your account name is already in use. </p>"
+                 . "<p> Try again. Or not.<br> I am not your supervisor </p>";
+       } 
        
         //$sql = "INSERT INTO BSBUsers(UserName) VALUES(" .$u. ")";
         //$result = $this->_db->query($sql);
         //$row = $result->fetch_assoc();
-        //if(
-       return "dziala dalej";    
+        //if(   
     }
 }
 ?>
