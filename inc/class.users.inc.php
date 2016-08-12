@@ -28,7 +28,7 @@ class BSBUsers
        public function createAccount()
    {
        $u = trim($_POST["username"]);
-       $sql = "SELECT COUNT(UserName) as theCount FROM Users"; // WHERE UserName="' .$u.'"';
+       $sql = "SELECT COUNT(UserName) as theCount FROM Users WHERE UserName='TomekKimak'";
         
        $result = $this->_db->query($sql);
         
@@ -38,12 +38,12 @@ class BSBUsers
             return "<h2> Error</h>"
                  . "<p> Your account name is already in use. </p>"
                  . "<p> Try again. Or not.<br> I am not your supervisor </p>";
-       } 
+       } else {
        
-        //$sql = "INSERT INTO BSBUsers(UserName) VALUES(" .$u. ")";
-        //$result = $this->_db->query($sql);
-        //$row = $result->fetch_assoc();
-        //if(   
+           $sql = "INSERT INTO BSBUsers(UserName) VALUES(" .$u. ")";
+           $result = $this->_db->query($sql);
+           $row = $result->fetch_assoc();
+       }    
     }
 }
 ?>
