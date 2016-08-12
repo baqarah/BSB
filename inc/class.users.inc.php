@@ -24,7 +24,8 @@ class BSBUsers
     
 
     /**    
-   public function createAccount()
+     *
+       public function createAccount()
    {
         $u = trim($_POST['username']);
         //tak sie robi hashe - nie ebedize to mi narazie potrzebne, ignoruje wysylanie maila
@@ -47,7 +48,7 @@ class BSBUsers
         //if(
            
     }
-*/
+    */
 }
 
 ?>
