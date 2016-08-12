@@ -15,7 +15,15 @@ class BSBUsers
             //echo "connected";
         } 
     }     
-/**    
+
+    public function testowa()
+    {
+        return "test pomyslny";
+    }
+    
+    
+
+    /**    
    public function createAccount()
    {
         $u = trim($_POST['username']);
