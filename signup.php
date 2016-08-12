@@ -5,8 +5,8 @@ include_once "common/header.php";
 
 if (!empty($_POST['username'])) {
     include_once "inc/class.users.inc.php";
-    //$users = new BSBUsers($db);
-    //echo $users->createAccount();
+    $users = new BSBUsers($db);
+    echo $users->createAccount();
 } else {
 ?>
     <h2>Sign up</h2>
