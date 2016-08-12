@@ -26,20 +26,24 @@ class BSBUsers
         $sql = 'SELECT COUNT(UserName) as theCount FROM Users' // WHERE UserName="' .$u.'"';
         
         $result = $this->_db->query($sql);
-        $row = $result->fetch_assoc();
-        //alert($row['theCount']);
-        if($row['theCount']!=0){
-            return "<h2> Error</h>"
-                 . "<p> Your account name is already in use. </p>"
-                 . "<p> Try again. Or not.<br> I am not your supervisor </p>"
-        }
+        if(!$result) {
+            echo "Oh shit, uciekaj"
+            } else {
 
-        $sql = "INSERT INTO BSBUsers(UserName) VALUES(" .$u. ")";
-        $result = $this->_db->query($sql);
-        //$row = $result->fetch_assoc();
-        //if(
-    }       
-    
+                $row = $result->fetch_assoc();
+                //alert($row['theCount']);
+                if($row['theCount']!=0){
+                    return "<h2> Error</h>"
+                         . "<p> Your account name is already in use. </p>"
+                         . "<p> Try again. Or not.<br> I am not your supervisor </p>"
+                }
+
+                $sql = "INSERT INTO BSBUsers(UserName) VALUES(" .$u. ")";
+                $result = $this->_db->query($sql);
+                //$row = $result->fetch_assoc();
+                //if(
+            }       
+    }
 }
 
 ?>
