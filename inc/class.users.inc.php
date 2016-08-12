@@ -28,7 +28,7 @@ class BSBUsers
        public function createAccount()
    {
        $u = trim($_POST["username"]);
-       $u = "TomekKimak";
+       $u = "Tomek";
        $sql = "SELECT COUNT(UserName) as theCount FROM Users WHERE UserName='" . $u . "'";
        echo $sql; 
        $result = $this->_db->query($sql);
@@ -41,9 +41,9 @@ class BSBUsers
                  . "<p> Try again. Or not.<br> I am not your supervisor </p>";
        } else {
        
-           $sql = "INSERT INTO BSBUsers(UserName) VALUES(" .$u. ")";
+           $sql = "INSERT INTO Users(UserName) VALUES('" .$u. "')";
            $result = $this->_db->query($sql);
-           $row = $result->fetch_assoc();
+           return $u . " added";
        }    
     }
 }
