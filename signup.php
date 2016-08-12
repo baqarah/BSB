@@ -6,6 +6,7 @@ include_once "common/header.php";
 if (!empty($_POST['username'])) {
     include_once "inc/class.users.inc.php";
     $users = new BSBUsers($db);
+    echo "czy to kurwa dziala?";
     //echo $users->createAccount();
 } else {
 ?>
@@ -22,5 +23,5 @@ if (!empty($_POST['username'])) {
 
 }
 //include_once "common/close.php";
-echo "koniec";
+
 ?>
