@@ -15,18 +15,13 @@ class BSBUsers
             //echo "connected";
         } 
     }     
-
-    public function testowa()
-    {
-        return "test pomyslny";
-    }      
      
-       public function createAccount()
+    public function createAccount()
     {
        $u = trim($_POST["username"]);
        
        $sql = "SELECT COUNT(UserName) as theCount FROM Users WHERE UserName='" . $u . "'";
-       echo $sql; 
+       //echo $sql; 
        $result = $this->_db->query($sql);
         
             
