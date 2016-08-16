@@ -18,24 +18,25 @@ class BSBUsers
      
     public function createAccount()
     {
-       $u = trim($_POST["username"]);
-       
-       $sql = "SELECT COUNT(UserName) as theCount FROM Users WHERE UserName='" . $u . "'";
-       //echo $sql; 
-       $result = $this->_db->query($sql);
+        $u = trim($_POST["username"]);
+        $p = $_POST["password"];
+        
+        $sql = "SELECT COUNT(UserName) as theCount FROM Users WHERE UserName='" . $u . "'";
+        //echo $sql; 
+        $result = $this->_db->query($sql);
         
             
-       $row = $result->fetch_assoc();
-       if($row['theCount']!=0){
+        $row = $result->fetch_assoc();
+        if($row['theCount']!=0){
             return "<h2> Error</h>"
                  . "<p> Your account name is already in use. </p>"
                  . "<p> Try again. Or not.<br> I am not your supervisor </p>";
-       } else {
-       
-           $sql = "INSERT INTO Users(UserName) VALUES('" .$u. "')";
-           $result = $this->_db->query($sql);
-           return $u . " added";
-       }    
+        } else {
+            
+            $sql = "INSERT INTO Users(UserName, Password) VALUES('" .$u. "','" .$p. "' )";
+            $result = $this->_db->query($sql);
+            return $u . " added";
+        }    
     }
 }
 ?>
