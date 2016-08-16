@@ -1,3 +1,17 @@
+.logo {
+    padding-bottom: 30 px;
+	height:1200px;
+	width:1200px;
+    background-color: rgba(255,255,255,0.8);
+	position: relative;
+	z-index:300;
+	transition: width 2s;
+}
+
+.logo:hover {
+	width:300px;
+}
+
 html, body {height: 100%;}     
       
 table {
