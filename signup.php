@@ -28,7 +28,7 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
     if ($_POST["password"]!=$_POST["repassword"]) {
         
 ?>
-    <h2> WRONG PASSWORD</h2>
+    <h2 style="color:red";> WRONG PASSWORD</h2>
     <h2>Sign up</h2>
     <form method="post" action="signup.php" id="registerform">
         <div>
@@ -51,7 +51,6 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
         include_once "inc/class.users.inc.php";
         $users = new BSBUsers($db);
         echo $users->createAccount();
-        echo $_POST["password"];
     }
 }
 //include_once "common/close.php";

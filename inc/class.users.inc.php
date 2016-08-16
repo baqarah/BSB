@@ -35,7 +35,7 @@ class BSBUsers
             
             $sql = "INSERT INTO Users(UserName, Password) VALUES('" .$u. "','" .$p. "' )";
             $result = $this->_db->query($sql);
-            return $u . " added";
+            return 'User "' $u . '"  added. <br> Well done, you.';
         }    
     }
 }
