@@ -3,7 +3,10 @@ include_once "common/base.php";
 $pageTitle = "Register";
 include_once "common/header.php";
 
-if (!empty($_POST["username"])) {
+
+if ($_POST["password"]!=$_POST["repassword"]) {
+    echo "Nieprawidlowe haslo";
+} elseif (!empty($_POST["username"])) {
     include_once "inc/class.users.inc.php";
     $users = new BSBUsers($db);
     echo $users->createAccount();
@@ -19,6 +22,9 @@ if (!empty($_POST["username"])) {
             <label for="password">Password:</label>
             <input type="text" name="password" id="password" /><br>
 
+            <label for="repassword">Retype your Password:</label>
+            <input type="text" name="repassword" id="repassword" /><br>
+            
             <input type="submit" name="register" id="register" value="Sign up" />
         </div>
     </form>
