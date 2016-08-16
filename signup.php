@@ -11,7 +11,7 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
     <form method="post" action="signup.php" id="registerform">
         <div>
             <label for="username">User Name:</label>
-            <input type="text" name="username" id="username" value=" <?php echo $_POST["username"]; ?>"/><br>
+            <input type="text" name="username" id="username" value=" <?php echo trim($_POST["username"]); ?>"/><br>
 
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" /><br>
@@ -33,7 +33,7 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
     <form method="post" action="signup.php" id="registerform">
         <div>
             <label for="username">User Name:</label>
-            <input type="text" name="username" id="username" value=" <?php echo $_POST["username"]; ?>"/><br>
+            <input type="text" name="username" id="username" value=" <?php echo trim($_POST["username"]); ?>"/><br>
             
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" /><br>
