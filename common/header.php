@@ -6,5 +6,4 @@
     <img src="common/logo.png" alt="BSB" style="width:100px;height:100px;" >
     <h1>Witam w BSB Project!</h1>
     <h3>enjoy yor stay</h3><br><br>
-
 </head>
