@@ -8,9 +8,24 @@
 </head>
 
 <body>
-    <header class="main-header">    
-        <img src="common/logo.png" alt="BSB" style="width:100px;height:100px;" >
-        Testowanie
-    </header>
+
+    <div id="page-wrap" >
+        <div id="header" >
+            <h1><a href="/" class="main-header" >BSB</a></h1>
+            
+            <div id="control" >
+                
+                <!-- IF Logged in -->
+                <p><a href="/logout.php" class="button" >Log Out</a></p>                    
+                <!-- TUTAJ POWINNO BYC TEZ a href z Kontem, zarzadzanie kontem dodam potem -->
+                
+                <!-- IF Logged out -->
+                <p><a href="/signup.php" class="button" >Sign Up</a> &nbsp; <a href="/login.php" class="button" >Log in </a></p>
+                
+                <!-- End of IF Statement -->
+            </div>
+        </div>
+    </div>
+
 </body>
 
