@@ -12,7 +12,7 @@
 
     <div id="page-wrap" >
         <div id="header" >
-            <h1><a href="/" class="main-header" >BSB</a></h1>
+            <h1><a href="/" class="main-header" >bsb</a></h1>
             
             <div id="control" >
                 
