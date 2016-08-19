@@ -12,18 +12,25 @@
 
     <div id="page-wrap" >
         <div id="header" >
-            <h1><a href="/" class="main-header" >bsb</a></h1>
+            
+
+            
             
             <div id="control" >
                 
-                <!-- IF Logged in -->
-                <p><a href="/logout.php" class="button" >Log Out</a></p>                    
-                <!-- TUTAJ POWINNO BYC TEZ a href z Kontem, zarzadzanie kontem dodam potem -->
                 
-                <!-- IF Logged out -->
-                <p><a href="/signup.php" class="button" >Sign Up</a> &nbsp; <a href="/login.php" class="button" >Log in </a></p>
+                <p>
+                    <!-- IF Logged in -->
+                    <a href="/" class="ikonka left" >bsb</a>
+                    
+                    <a href="/logout.php" class="button right" >Log Out</a>                    
+                    <!-- TUTAJ POWINNO BYC TEZ a href z Kontem, zarzadzanie kontem dodam potem -->
+                
+                    <!-- IF Logged out -->
+                    <a href="/signup.php" class="button right" >Sign Up</a> &nbsp; <a href="/login.php" class="button right" >Log in </a>
                 
                 <!-- End of IF Statement -->
+                </p>
             </div>
         </div>
     </div>

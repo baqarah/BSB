@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+
 @font-face {
     font-family: "BebasReg";
     src: url("fonts/BebasNeue Regular.ttf");
@@ -12,7 +17,7 @@ a {
     color: black;
 }
 
-.main-header {
+.ikonka {
     font-size: 2em;
     font-family: "Baloo Da", cursive;
     position: relative;
@@ -25,15 +30,20 @@ a {
     background-color: #73bec8;
     height: 60px;
     width: 100px;
-    border:3px ;
+    border: 3px;
     text-align:center;
     vertical-align:top;
     line-height:60px;
 }
 
-.main-header:hover {
-    
+.left {
+    float: left;
 }
+
+.right {
+    float: right;
+}
+
 
 html, body {height: 100%;}     
       
