@@ -7,6 +7,10 @@ body {
     font-family:"BebasReg";
 }
 
+a {
+    text-decoration: none;
+}
+
 .main-header {
     padding-bottom: 30 px;
     height:100px;
@@ -31,7 +35,7 @@ body {
 }
 
 .main-header:hover {
-    background-color: rgba(255,255,255,0.8);
+    
 }
 
 html, body {height: 100%;}     
