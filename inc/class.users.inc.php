@@ -38,5 +38,13 @@ class BSBUsers
             return 'User "' .$u. '"  added. <br> Well done, you.';
         }    
     }
+
+    public function accountLogin()
+    {
+
+        
+        return TRUE;
+    }
+    
 }
 ?>
