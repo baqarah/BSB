@@ -4,7 +4,7 @@ $pageTitle = "Home";
 include_once "common/header.php";
 
 
-if(!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
+if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
 
     echo "<p>You are currently logged in.</p>";
 } elseif (!empty($_POST['username']) && !empty($_POST['password'])) {
@@ -33,11 +33,9 @@ if(!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
         
     }
 } elseif (empty($_POST['username']) || empty($_POST['password'])) {
-
-    echo "<p>Your credentials here:</p>";
 ?>
     
-    <h2>Sign up</h2>
+    <h2>Login info here:</h2>
     <form method="post" action="login.php" id="loginform">
     <div>
     <label for="username">User Name:</label>
