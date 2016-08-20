@@ -38,6 +38,7 @@ a {
     vertical-align:top;
     line-height:60px;
     margin: 5px;
+    font-size:1em;
    
 }
 
@@ -70,6 +71,6 @@ td {
     vertical-align: center;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    font-size: 2em;
+    font-size: 1em;
     padding: 0px;
 }
