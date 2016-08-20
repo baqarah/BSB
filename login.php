@@ -4,7 +4,7 @@ $pageTitle = "Home";
 include_once "common/header.php";
 
 
-if (1=2) {
+if (1==2) {
 
 if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
 
