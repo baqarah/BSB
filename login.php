@@ -3,7 +3,7 @@ include_once "common/base.php";
 $pageTitle = "Home";
 include_once "common/header.php";
 
-
+/*
 if(!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
 
     echo "<p>You are currently logged in.</p>";
@@ -54,7 +54,7 @@ if(!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
 
     
 }
-
+*/
 include_once "common/footer.php";
 
 ?>
