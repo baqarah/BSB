@@ -14,11 +14,11 @@ if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
         echo '<meta http-equiv="refresh" content="0;/">';
         exit;
     } else {
-        echo "<p>Login failed | Try again</p>";
-*/
+*/        
+
 ?>
 
-<h2>Sign up</h2>
+<h2>Login failed, try again:</h2>
 <form method="post" action="login.php" id="loginform">
     <div>
         <label for="username">User Name:</label>
