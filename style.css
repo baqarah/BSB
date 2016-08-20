@@ -21,6 +21,9 @@ a {
     font-size: 2em;
     font-family: "Baloo Da", cursive;
     position: relative;
+    height:60px;
+    line-height:60px;
+    display:inline-block;
 }
 
 
@@ -67,6 +70,6 @@ td {
     vertical-align: center;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    font-size: 12px;
+    font-size: 2em;
     padding: 0px;
 }
