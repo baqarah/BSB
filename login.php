@@ -32,7 +32,7 @@ if(!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
 <?php
         
     }
-} else {
+} elseif (empty($_POST['username']) || empty($_POST['password'])) {
 
     echo "<p>Your credentials here:</p>";
 ?>
