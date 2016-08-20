@@ -13,8 +13,7 @@ if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
     if ($users->accountLogin()===TRUE) {
         echo '<meta http-equiv="refresh" content="0;/">';
         exit;
-    } else {
-*/        
+    } else {        
 
 ?>
 
@@ -31,7 +30,7 @@ if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
     </div>
 </form>
 
-/*
+
 <?php
         
     }
@@ -58,6 +57,6 @@ if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
 }
 
 include_once "common/footer.php";
-
-?>
 */
+?>
+
