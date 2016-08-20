@@ -17,19 +17,19 @@ if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
         echo "<p>Login failed | Try again</p>";
 */
 ?>
-        
-        <h2>Sign up</h2>
-        <form method="post" action="login.php" id="loginform">
-        <div>
+
+<h2>Sign up</h2>
+<form method="post" action="login.php" id="loginform">
+    <div>
         <label for="username">User Name:</label>
         <input type="text" name="username" id="username" /><br>
-
+        
         <label for="password">Password:</label>
         <input type="password" name="password" id="password" /><br>
         
         <input type="submit" name="login" id="login" value="Login" />
-        </div>
-        </form>
+    </div>
+</form>
 
 /*
 <?php
@@ -40,15 +40,15 @@ if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
     
     <h2>Login info here:</h2>
     <form method="post" action="login.php" id="loginform">
-    <div>
-    <label for="username">User Name:</label>
-    <input type="text" name="username" id="username" /><br>
-
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" /><br>
-
-    <input type="submit" name="login" id="login" value="Login" />
-    </div>
+        <div>
+            <label for="username">User Name:</label>
+            <input type="text" name="username" id="username" /><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" /><br>
+            
+            <input type="submit" name="login" id="login" value="Login" />
+        </div>
     </form>
 
 <?php
@@ -56,7 +56,8 @@ if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
 
     
 }
-*/
+
 include_once "common/footer.php";
 
 ?>
+*/
