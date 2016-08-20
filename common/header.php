@@ -21,6 +21,7 @@
                 
                 <p>
                     <!-- IF Logged in -->
+                    
                     <a href="/" class="ikonka left" >bsb</a>
                     
                     <a href="/logout.php" class="button right" >Log Out</a>                    
@@ -33,7 +34,5 @@
                 </p>
             </div>
         </div>
-    </div>
 
-</body>
 

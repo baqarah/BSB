@@ -5,7 +5,7 @@ include_once "common/header.php";
 
 if(!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['UserName'])) {
 
-    echo "<p>You are currently logged in.</p>"
+    echo "<p>You are currently logged in.</p>";
 }
 elseif (!empty($_POST['username']) && !empty($_POST['password'])) {
     include_once 'inc/class.users.inc.php';
