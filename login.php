@@ -5,11 +5,15 @@ include_once "common/header.php";
 
 
 
-
-if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['Username'])) {
-    echo "<p>You are currently logged in.</p>";
-    exit;
+if (1<2) {
+    echo "dziala";
 }
+
+
+//if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['Username'])) {
+//    echo "<p>You are currently logged in.</p>";
+//    exit;
+//}
 
 
     /*
