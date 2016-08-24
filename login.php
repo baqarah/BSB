@@ -1,6 +1,4 @@
 <?php
-include "test_users.php";
-echo $path;
 
 include_once $path . "/common/base.php";
 $pageTitle = "Login";
