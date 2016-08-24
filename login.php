@@ -1,5 +1,7 @@
 <?php
 $path = $_SERVER['DOCUMENT_ROOT'];
+echo $path;
+echo $path . "/inc/costam";
 include_once $path . "/common/base.php";
 $pageTitle = "Login";
 include_once $path . "/common/header.php";
