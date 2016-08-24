@@ -1,9 +1,7 @@
 <?php
-$path = $_SERVER['DOCUMENT_ROOT'];
+$path=$_SERVER['DOCUMENT_ROOT'];
 echo $path;
-echo $path . "/inc/costam";
 
-exit;
 include_once $path . "/common/base.php";
 $pageTitle = "Login";
 include_once $path . "/common/header.php";
@@ -70,4 +68,3 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
 include_once $path . "/common/footer.php";
 
 ?>
-
