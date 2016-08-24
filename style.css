@@ -3,7 +3,7 @@
 }
 
 #control {
-    padding-bottom: .5em;
+   height: 4.6em;
 }
 
 @font-face {
@@ -24,8 +24,6 @@ a {
     font-size: 2em;
     font-family: "Baloo Da", cursive;
     position: relative;
-    height:4em;
-    line-height:1.75em;
     display:inline-block;
     margin: .3em;
 }
