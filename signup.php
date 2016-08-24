@@ -11,7 +11,7 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
     <form method="post" action="signup.php" id="registerform">
         <div>
             <label for="username"></label>
-            <input type="text" name="username" id="username" placeholer="User Name" value=" <?php echo trim($_POST["username"]); ?>"/><br>
+            <input type="text" name="username" id="username" placeholer="User Name" /><br>//value=" <?php echo trim($_POST["username"]); ?>"/><br>
 
             <label for="password"></label>
             <input type="password" name="password" id="password" placeholder="Password" /><br>
@@ -33,12 +33,12 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
     <form method="post" action="signup.php" id="registerform">
         <div>
             <label for="username"></label>
-            <input type="text" name="username" id="username" value=" placeholder="User Name" <?php echo trim($_POST["username"]); ?>"/><br>
+            <input type="text" name="username" id="username" placeholder="User Name" /><br> //<?php echo trim($_POST["username"]); ?>"/><br>
             
             <label for="password"></label>
             <input type="password" name="password" id="password" placeholder="Password"/><br>
             
-            <label for="repassword">Retype your Password:</label>
+            <label for="repassword"></label>
             <input type="password" name="repassword" id="repassword" placeholder="Retype your password" /><br>
             
             <input type="submit" name="register" id="register" value="Sign up" />
