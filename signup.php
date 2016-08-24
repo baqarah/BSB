@@ -10,7 +10,7 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
     
     <form method="post" action="signup.php" id="registerform">
         <div class="formularz">
-            <h2>Sign up</h2>
+            <h2 class="tytul">Sign up</h2>
             <label for="username"></label>
             <input type="text" name="username" id="username" placeholder="User Name" /><br>
 
@@ -33,7 +33,7 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
     <form method="post" action="signup.php" id="registerform">
         <div class="formularz">
             <h2 style="color:red";> WRONG PASSWORD</h2>
-            <h2>Sign up</h2>
+            <h2 class="tytul">Sign up</h2>
 
             <label for="username"></label>
             <input type="text" name="username" id="username" placeholder="User Name" /><br>

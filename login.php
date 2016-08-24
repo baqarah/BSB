@@ -23,7 +23,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
     
     <form method="post" action="login.php" name="loginform" id="loginform">
         <div class="formularz">
-            <h2>Login info here:</h2>
+            <h2 class="tytul">Login info here:</h2>
 
             <label for="username"></label>
             <input type="text" name="username" id="username" placeholder="User Name"/><br>
@@ -46,7 +46,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
     
     <form method="post" action="login.php" name="loginform" id="loginform">
         <div class="formularz">
-            <h2>Login info here:</h2>
+            <h2 class="tytul">Login info here:</h2>
             
             <label for="username"></label>
             <input type="text" name="username" id="username" placeholder="User Name" /><br>
