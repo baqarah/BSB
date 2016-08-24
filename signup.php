@@ -10,14 +10,14 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
     <h2>Sign up</h2>
     <form method="post" action="signup.php" id="registerform">
         <div>
-            <label for="username">User Name:</label>
-            <input type="text" name="username" id="username" value=" <?php echo trim($_POST["username"]); ?>"/><br>
+            <label for="username"></label>
+            <input type="text" name="username" id="username" placeholer="User Name" value=" <?php echo trim($_POST["username"]); ?>"/><br>
 
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" /><br>
+            <label for="password"></label>
+            <input type="password" name="password" id="password" placeholder="Password" /><br>
 
-            <label for="repassword">Retype your Password:</label>
-            <input type="password" name="repassword" id="repassword" /><br>
+            <label for="repassword"></label>
+            <input type="password" name="repassword" id="repassword" placeholder="Retype your password"/><br>
             
             <input type="submit" name="register" id="register" value="Sign up" />
         </div>
@@ -32,14 +32,14 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
     <h2>Sign up</h2>
     <form method="post" action="signup.php" id="registerform">
         <div>
-            <label for="username">User Name:</label>
-            <input type="text" name="username" id="username" value=" <?php echo trim($_POST["username"]); ?>"/><br>
+            <label for="username"></label>
+            <input type="text" name="username" id="username" value=" placeholder="User Name" <?php echo trim($_POST["username"]); ?>"/><br>
             
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" /><br>
+            <label for="password"></label>
+            <input type="password" name="password" id="password" placeholder="Password"/><br>
             
             <label for="repassword">Retype your Password:</label>
-            <input type="password" name="repassword" id="repassword" /><br>
+            <input type="password" name="repassword" id="repassword" placeholder="Retype your password" /><br>
             
             <input type="submit" name="register" id="register" value="Sign up" />
         </div>
