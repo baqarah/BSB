@@ -6,6 +6,10 @@ include_once $path . "/common/base.php";
 include_once $path . "/common/cookie.php";
 include_once $path . "/common/header.php";
 
+
+echo PTH;
+
+
 if ($_SESSION['LoggedIn'] == 1) { 
     include_once $path . "/common/menu.php";
 } else {
