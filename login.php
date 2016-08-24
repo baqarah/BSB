@@ -4,7 +4,7 @@ $pageTitle = "Home";
 include_once "common/header.php";
 
 
-
+/*<!--
 
 if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['Username'])) {
 
@@ -28,6 +28,8 @@ if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['Username'])) {
     
 }
 
+-->*/
+                               
 include_once "common/footer.php";
 
 ?>
