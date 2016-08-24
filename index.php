@@ -1,4 +1,5 @@
 <?php 
+$pageTitle = "Home";
 include_once "common/base.php";
 include_once "common/cookie.php";
 include_once "common/header.php";
