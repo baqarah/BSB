@@ -1,3 +1,4 @@
+</table id="MyTable">
 <tr>
     <td><?php echo $_COOKIE["cell0"] ?></td>
     <td><?php echo  $_COOKIE["cell1"] ?></td>
@@ -33,5 +34,6 @@
     <td><?php echo $_COOKIE["cell23"] ?></td>
     <td><?php echo $_COOKIE["cell24"] ?></td>
 </tr>
+</table>
 
 
