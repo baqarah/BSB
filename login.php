@@ -1,5 +1,5 @@
 <?php
-
+echo "tutaj jest path: " . $path. "<br>";
 include_once $path . "/common/base.php";
 $pageTitle = "Login";
 include_once $path . "/common/header.php";
