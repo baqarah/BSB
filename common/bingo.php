@@ -14,4 +14,4 @@ if ($_SESSION['LoggedIn'] == 1) {
 Zeby zresetowac cookiesy: <a href="http://89.77.118.160:8080/cook.php">Kliknij tutaj</a> 
 <script src = "common/script.js"></script>
 
-<?php include_once "common/footer.php"; ?>
+<?php include_once "http://89.77.118.160:8080/common/footer.php"; ?>
