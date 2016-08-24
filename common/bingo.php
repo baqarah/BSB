@@ -1,8 +1,8 @@
 <?php 
 $pageTitle = "Tabela";
-include_once "common/base.php";
-include_once "common/cookie.php";
-include_once "common/header.php";
+include_once "base.php";
+include_once "cookie.php";
+include_once "header.php";
 
 if ($_SESSION['LoggedIn'] == 1) { 
     include_once 'tabela.php';
