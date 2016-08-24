@@ -100,19 +100,20 @@ input {
 .menu-list {
     margin: 0 auto;
     width: 19em;
+    
 }
 
 .menu-button {
     display:inline-block;
     border-radius: .3em;
     background-color: #73bec8;
-    height: 8em;
-    width: 8em;
+    height: 8.5em;
+    width: 8.5em;
     border: .25em;
     text-align:center;
     vertical-align:top;
-    line-height:4em;
-    margin: 0.125em;
+    line-height:5em;
+    margin: 0.4em;
     font-size:1em;
     padding: .75em;
 }
