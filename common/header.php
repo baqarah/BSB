@@ -24,7 +24,7 @@
                     
                     
                     <a href="/" class="ikonka left" >bsb</a>
-                    <?php if (!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) { ?>
+                    <?php if ($_SESSION['LoggedIn'] == 1) { ?>
                         <a href="/logout.php" class="button right" >Log Out</a>                    
                         <!-- TUTAJ POWINNO BYC TEZ a href z Kontem, zarzadzanie kontem dodam potem -->
                     <?php } else { ?>
@@ -34,7 +34,7 @@
                 </p>
             </div>
         </div>
-        <?php echo !empty($_SESSION['LoggedIn']);
+        <?php echo <p>!empty($_SESSION['LoggedIn']);
         echo !empty($_SESSION['Username']);
  ?>
 
