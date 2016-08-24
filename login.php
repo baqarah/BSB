@@ -1,7 +1,7 @@
 <?php
-include_once "common/base.php";
+include_once $path . "common/base.php";
 $pageTitle = "Login";
-include_once "common/header.php";
+include_once $path . "common/header.php";
 
 
 
@@ -62,7 +62,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
 }
 
                                
-include_once "common/footer.php";
+include_once $path . "/common/footer.php";
 
 ?>
 
