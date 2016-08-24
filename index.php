@@ -1,5 +1,5 @@
 <?php 
-$path = $_SERVER['DOCUMENT_ROOT'];
+define('PTH', $_SERVER['DOCUMENT_ROOT']);
 $pageTitle = "Home";
 
 include_once PTH . "/common/base.php";
