@@ -1,7 +1,7 @@
 <?php
-include_once $path . "common/base.php";
+include_once $path . "/common/base.php";
 $pageTitle = "Login";
-include_once $path . "common/header.php";
+include_once $path . "/common/header.php";
 
 
 
@@ -12,7 +12,7 @@ if (!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) {
 
 
 if (!empty($_POST['username']) && !empty($_POST['password'])) {
-    include_once "inc/class.users.inc.php";
+    include_once $path . "/inc/class.users.inc.php";
     $users = new BSBUsers($db);
     if ($users->accountLogin() == TRUE) {
         echo "<meta http-equiv='refresh' content='0;/'>";
