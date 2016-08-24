@@ -6,8 +6,6 @@ include_once "common/header.php";
 
 
 
-
-
 if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['Username'])) {
 
     echo "<p>You are currently logged in.</p>";
@@ -16,7 +14,8 @@ if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['Username'])) {
     include_once "inc/class.users.inc.php";
     $users = new BSBUsers($db);
     if ($users->accountLogin() == TRUE) {
-        echo "<meta http-equiv='refresh' content='0;/'>";
+        echo "test";
+        //echo "<meta http-equiv='refresh' content='0;/'>";
         exit;
     } else {       
 
