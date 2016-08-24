@@ -1,8 +1,8 @@
 <?php
 
-$path=$_SERVER['DOCUMEN_ROOT'];
+$path=$_SERVER['DOCUMENT_ROOT'];
 echo $path;
-
+//include $path . 
 
 ?>
 
