@@ -88,11 +88,31 @@ input {
 }
 
 .tytul {
-    padding: .75em;
+    padding: .5em;
 }
     
 .formularz {
     margin: auto;
     width: 19em;
     font-family: Helvetica;
+}
+
+.menu-list {
+    margin: 0 auto;
+    width: 19em;
+}
+
+.menu-button {
+    display:inline-block;
+    border-radius: .3em;
+    background-color: #73bec8;
+    height: 8em;
+    width: 8em;
+    border: .25em;
+    text-align:center;
+    vertical-align:top;
+    line-height:4em;
+    margin: 0.125em;
+    font-size:1em;
+    padding: .75em;
 }

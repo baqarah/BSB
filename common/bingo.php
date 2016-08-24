@@ -1,13 +1,11 @@
 <?php 
-$pageTitle = "Home";
+$pageTitle = "Tabela";
 include_once "common/base.php";
 include_once "common/cookie.php";
 include_once "common/header.php";
 
 if ($_SESSION['LoggedIn'] == 1) { 
-    include_once 'common/menu.php';
-} else {
-    echo '<h2 class="tytul">Login first</h2>';
+    include_once 'common/tabela.php';
 }
 ?>
 
