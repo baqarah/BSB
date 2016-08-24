@@ -4,11 +4,8 @@ $pageTitle = "Home";
 include_once "common/header.php";
 
 
-
-if (1<2) {
-    echo "dziala";
-}
-
+echo empty($_SESSION['LoggedIn']);
+echo empty($_SESSION['Username']);
 
 //if (!empty($_SESSION['LoggedIn']) $$ !empty($_SESSION['Username'])) {
 //    echo "<p>You are currently logged in.</p>";
