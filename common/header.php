@@ -4,8 +4,8 @@
 
     <title>BSBingo | <?php echo $pageTitle ?></title>
     <link href="https://fonts.googleapis.com/css?family=Baloo+Da" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/style.css" />
-    <link rel="shortcut icon"  type"image/x-icon href="/icon.ico" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon"  type"image/x-icon href="icon.ico" />
 
 </head>
 
