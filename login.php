@@ -20,9 +20,11 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
     } else {       
 ?>
         
-    <h2>Login failed, try again:</h2>
+    
     <form method="post" action="login.php" name="loginform" id="loginform">
         <div class="formularz">
+            <h2>Login info here:</h2>
+
             <label for="username"></label>
             <input type="text" name="username" id="username" placeholder="User Name"/><br>
             
@@ -41,9 +43,11 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
 
 ?>
         
-    <h2>Login info here:</h2>
+    
     <form method="post" action="login.php" name="loginform" id="loginform">
         <div class="formularz">
+            <h2>Login info here:</h2>
+            
             <label for="username"></label>
             <input type="text" name="username" id="username" placeholder="User Name" /><br>
             
