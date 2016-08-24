@@ -24,15 +24,17 @@
                     
                     
                     <a href="/" class="ikonka left" >bsb</a>
-                    <?php if (!empty($_SESSION["LoggedIn"]) && !empty($_SESSION["Username"])) { ?>
+                    <?php if (!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) { ?>
                         <a href="/logout.php" class="button right" >Log Out</a>                    
                         <!-- TUTAJ POWINNO BYC TEZ a href z Kontem, zarzadzanie kontem dodam potem -->
                     <?php } else { ?>
                         <a href="/signup.php" class="button right" >Sign Up</a> &nbsp; <a href="/login.php" class="button right" >Log in </a>
                     <?php } ?>
-                <!-- End of IF Statement -->
+
                 </p>
             </div>
         </div>
-
+        <?php echo !empty($_SESSION['LoggedIn']);
+        echo !empty($_SESSION['Username']);
+ ?>
 
