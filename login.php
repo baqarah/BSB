@@ -10,7 +10,7 @@ if (!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) {
     exit;
 }
 
-/*
+
 if (!empty($_POST['username']) && !empty($_POST['password'])) {
     include_once "inc/class.users.inc.php";
     $users = new BSBUsers($db);
@@ -26,7 +26,6 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
         echo "tutaj bedzie formularz normalny";  
 }
 
-*/
                                
 include_once "common/footer.php";
 
