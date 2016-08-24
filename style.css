@@ -81,14 +81,15 @@ input {
     border: 1px solid #cccccc;
     font-size: 1em;
     box-sizing: border-box;
-    padding: .75em;
     margin-top: .25em;
     margin-bottom: 1em;
     width: 100%;
 }
 
 .formularz {
+    font-family: "Calibri";
     margin: auto;
     width: 19em;
+    padding: .75em;
     
 }
