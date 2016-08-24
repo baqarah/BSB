@@ -7,9 +7,10 @@ include_once "common/header.php";
 
 if (empty($_POST["username"]) || empty($_POST["password"])) {
 ?>
-    <h2>Sign up</h2>
+    
     <form method="post" action="signup.php" id="registerform">
-        <div>
+        <div class="formularz">
+            <h2>Sign up</h2>
             <label for="username"></label>
             <input type="text" name="username" id="username" placeholder="User Name" /><br>
 
@@ -28,10 +29,12 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
     if ($_POST["password"]!=$_POST["repassword"]) {
         
 ?>
-    <h2 style="color:red";> WRONG PASSWORD</h2>
-    <h2>Sign up</h2>
+
     <form method="post" action="signup.php" id="registerform">
-        <div>
+        <div class="formularz">
+            <h2 style="color:red";> WRONG PASSWORD</h2>
+            <h2>Sign up</h2>
+
             <label for="username"></label>
             <input type="text" name="username" id="username" placeholder="User Name" /><br>
             
