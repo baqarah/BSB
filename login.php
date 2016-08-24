@@ -1,4 +1,6 @@
 <?php
+
+echo PTH;
 include_once PTH . "/common/base.php";
 $pageTitle = "Login";
 include_once PTH . "/common/header.php";
