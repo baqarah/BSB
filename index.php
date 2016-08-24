@@ -1,5 +1,8 @@
-<?php include_once "common/cookie.php"; ?>
-<?php include_once "common/header.php"; ?>
+<?php 
+include_once "common/base.php";
+include_once "common/cookie.php";
+include_once "common/header.php";
+?>
 
 <table id="MyTable">
     <?php include_once 'common/tabela.php'; ?>	

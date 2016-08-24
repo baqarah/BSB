@@ -17,12 +17,12 @@
             <div id="control" >
                 <p>
                     <a href="/" class="ikonka left" >bsb</a>
-                    <?php //if ($_SESSION['LoggedIn'] == 1) { ?>
+                    <?php if ($_SESSION['LoggedIn'] == 1) { ?>
                         <a href="/logout.php" class="button right" >Log Out</a>                    
                         <!-- TUTAJ POWINNO BYC TEZ a href z Kontem, zarzadzanie kontem dodam potem -->
-                    <?php //} else { ?>
+                    <?php/} else { ?>
                         <a href="/signup.php" class="button right" >Sign Up</a> &nbsp; <a href="/login.php" class="button right" >Log in </a>
-                    <?php //} ?>
+                    <?php } ?>
 
                 </p>
             </div>
