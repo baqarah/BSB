@@ -41,9 +41,25 @@ class BSBUsers
 
     public function accountLogin()
     {
+
+        $u = trim($_POST["username"]);
+        $p = trim($_POST["password"]);
+
+        $sql = "SELECT COUNT(UserName) as theCount 
+                FROM Users 
+                WHERE UserName='" . $u . "' AND Password='" . $p . "'";
+        $result = $this->_db->query($sql);
+        $row = $result->fetch_assoc();
+
+        if($row['theCount']==1) {
+            $_SESSION['Username'] = htmlentities($_POST['username'], ENT_QUOTES);
+            $_SESSION['LoggedIn'] = 1;
+            return TRUE;
+        } else {
+            return FALSE;
+        }
         
         
-        return TRUE;
     }
     
 }
