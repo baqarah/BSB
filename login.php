@@ -18,12 +18,43 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
         echo "<meta http-equiv='refresh' content='0;/'>";
         exit;
     } else {       
+?>
+        
+    <h2>Login failed, try again:</h2>
+    <form method="post" action="login.php" name="loginform" id="loginform">
+        <div>
+            <label for="username">User Name:</label>
+            <input type="text" name="username" id="username" /><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" /><br>
+            
+            <input type="submit" name="login" id="login" value="Login" />
+        </div>
+    </form>
 
-        echo "tutaj bedzie formularz z bledem";
 
+<?php
+        
     };        
 } elseif (empty($_POST['username']) || empty($_POST['password'])) {
-        echo "tutaj bedzie formularz normalny";  
+
+?>
+        
+    <h2>Login info here:</h2>
+    <form method="post" action="login.php" name="loginform" id="loginform">
+        <div>
+            <label for="username">User Name:</label>
+            <input type="text" name="username" id="username" /><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" /><br>
+            
+            <input type="submit" name="login" id="login" value="Login" />
+        </div>
+    </form>
+
+<?php
 }
 
                                
