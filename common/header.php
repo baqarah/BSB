@@ -20,7 +20,10 @@
                     <?php if ($_SESSION['LoggedIn'] == 1) { ?>
                         <a href="/logout.php" class="button right" >Log Out</a>                    
                         <!-- TUTAJ POWINNO BYC TEZ a href z Kontem, zarzadzanie kontem dodam potem -->
-                    <?php/} else { ?>
+                    <?php 
+                    }
+                    if !isset($_SESSION['LoggedIn']) {
+                     ?>
                         <a href="/signup.php" class="button right" >Sign Up</a> &nbsp; <a href="/login.php" class="button right" >Log in </a>
                     <?php } ?>
 
