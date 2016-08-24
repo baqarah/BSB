@@ -78,8 +78,8 @@ td {
 }
 
 input {
-    border: 1px;
-    font-size: 1.5em;
+    border: 1px solid #cccccc;
+    font-size: 1em;
     box-sizing: border-box;
     padding: .75em;
     margin-top: .25em;
