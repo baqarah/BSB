@@ -1,8 +1,7 @@
 <?php
-$path=$_SERVER['DOCUMENT_ROOT'];
-include_once $path . "/common/base.php";
+include_once PTH . "/common/base.php";
 $pageTitle = "Login";
-include_once $path . "/common/header.php";
+include_once PTH . "/common/header.php";
 
 
 
@@ -13,7 +12,7 @@ if (!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) {
 
 
 if (!empty($_POST['username']) && !empty($_POST['password'])) {
-    include_once $path . "/inc/class.users.inc.php";
+    include_once PTH . "/inc/class.users.inc.php";
     $users = new BSBUsers($db);
     if ($users->accountLogin() == TRUE) {
         echo "<meta http-equiv='refresh' content='0;/'>";
@@ -62,7 +61,7 @@ if (!empty($_POST['username']) && !empty($_POST['password'])) {
 <?php
 }
 
-                               
-include_once $path . "/common/footer.php";
+                           
+include_once PTH . "/common/footer.php";
 
 ?>
