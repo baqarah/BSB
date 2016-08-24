@@ -2,16 +2,14 @@
 $path = $_SERVER['DOCUMENT_ROOT'];
 $pageTitle = "Home";
 
-include_once $path . "/common/base.php";
-include_once $path . "/common/cookie.php";
-include_once $path . "/common/header.php";
+include_once PTH . "/common/base.php";
+include_once PTH . "/common/cookie.php";
+include_once PTH . "/common/header.php";
 
-
-echo PTH;
 
 
 if ($_SESSION['LoggedIn'] == 1) { 
-    include_once $path . "/common/menu.php";
+    include_once PTH . "/common/menu.php";
 } else {
     echo '<h2 class="tytul">Login first</h2>';
 }
@@ -22,4 +20,4 @@ if ($_SESSION['LoggedIn'] == 1) {
 Zeby zresetowac cookiesy: <a href="http://89.77.118.160:8080/cook.php">Kliknij tutaj</a> 
 <script src = "common/script.js"></script>
 
-<?php include_once $path . "/common/footer.php"; ?>
+<?php include_once PTH . "/common/footer.php"; ?>
