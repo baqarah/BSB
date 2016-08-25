@@ -111,7 +111,7 @@ input {
     border: .25em;
     text-align:center;
     vertical-align:top;
-    line-height:5em;
+    line-height: 1em;
     margin: 0.4em;
     font-size:1em;
     padding: .75em;
@@ -119,7 +119,7 @@ input {
 }
 
 .menu-pic {
-    heigh: 4em;
-    width: 5em;
+    heigh: 5em;
+    width: 6em;
     padding: .5em;
 }
