@@ -20,11 +20,11 @@
             </a>
             <a href="/"  class="menu-button" style="background-color: #c384c5">
 
-                <span class="menu-text" >Tutaj tekst</span>
+                <span class="menu-text" >__</span>
             </a>
             <a href="https://en.wikipedia.org/wiki/Bingo_(U.S.)"  class="menu-button" style="background-color: #c85977">
                 <img src="/common/menu/help.png" class="menu-pic" >
-                <span class="menu-text" >Tutaj tekst</span>
+                <span class="menu-text" >Help</span>
             </a>
         </div>
     </div>
