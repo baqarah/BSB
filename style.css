@@ -117,3 +117,9 @@ input {
     padding: .75em;
     color: white;   
 }
+
+.menu-pic {
+    heigh: 4em;
+    width: 5em;
+    padding: .5em;
+}
