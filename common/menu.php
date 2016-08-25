@@ -1,6 +1,6 @@
 <div class="menu-list" id="menu">
     <div id="menu-header" >
-        <p class="tytul"> Whatcha need?</p2>
+        <!-- <p class="tytul"> Whatcha need?</p2>-->
         <div id="menu">
             <a href="/common/bingo.php" class="menu-button" style="background-color: #73bec8">
                 <img src="/common/menu/bingo.png"  class="menu-pic">
