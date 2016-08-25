@@ -7,7 +7,7 @@ include_once $pth . "/common/cookie.php";
 include_once $pth . "/common/header.php";
 
 if ($_SESSION['LoggedIn'] == 1) { 
-    include_once $pth . "x/common/tabela.php";
+    include_once $pth . "/common/tabela.php";
 }
 ?>
 
