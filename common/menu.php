@@ -7,7 +7,7 @@
                 <span class="menu-text">Bingo jest tutaj</span>
             </a>
             <a href="/"  class="menu-button" style="background-color: #e4ba3f" >
-                <img src="/common/menu/bingo.png" class="menu-pic" >
+                <img src="/common/menu/user.png" class="menu-pic" >
                 <span class="menu-text" >User</span>
             </a>
             <a href="/"  class="menu-button" style="background-color: #cb732b">
