@@ -126,3 +126,7 @@ input {
 .menu-text {
     line-height: 2em;
 }
+
+#menu-header {
+    padding-top: 0.5em;
+}
