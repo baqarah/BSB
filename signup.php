@@ -1,7 +1,8 @@
 <?php
-include_once $path . "/common/base.php";
+$pth = $_SERVER['DOCUMENT_ROOT'];
+include_once $pth . "/common/base.php";
 $pageTitle = "Register";
-include_once $path . "/common/header.php";
+include_once $pth . "/common/header.php";
 
 
 
@@ -51,7 +52,7 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
 <?php
 
     } else {
-        include_once $path . "/inc/class.users.inc.php";
+        include_once $pth . "/inc/class.users.inc.php";
         $users = new BSBUsers($db);
         echo $users->createAccount();
     }

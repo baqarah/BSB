@@ -6,5 +6,4 @@ define('DB_USER', 'user');
 define('DB_PASS', '666number');
 define('DB_NAME', 'BSB');
 
-
 ?>
