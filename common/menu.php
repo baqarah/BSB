@@ -11,12 +11,12 @@
                 <span class="menu-text" >User</span>
             </a>
             <a href="/"  class="menu-button" style="background-color: #cb732b">
-
-                <span class="menu-text" >Tutaj tekst</span>
+                <img src="/common/menu/event.png" class="menu-pic" >
+                <span class="menu-text" >Event</span>
             </a>
             <a href="/"  class="menu-button" style="background-color: #89bc62">
-
-                <span class="menu-text" >Tutaj tekst</span>
+                <img src="/common/menu/hasla.png" class="menu-pic" >
+                <span class="menu-text" >Hasla</span>
             </a>
             <a href="/"  class="menu-button" style="background-color: #c384c5">
 
