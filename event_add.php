@@ -21,11 +21,11 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
             <input type="text" name="eventnazwa" id="eventnazwa" placeholder="Event Name" /><br>
             
             <p>Start Date and Time:</p>
-            <input type="text" data-field="datetime" name="start" id="start" readonly /><br>
+            <input type="text" data-field="datetime" data-format="yyyy-MM-dd HH:mm:ss" name="start" id="start" readonly /><br>
             <div id="dtBox"></div>
     
             <p>End Date and Time : </p>
-            <input type="text" data-field="datetime" name="koniec" id="koniec" readonly />
+            <input type="text" data-field="datetime" data-format="yyyy-MM-dd HH:mm:ss" name="koniec" id="koniec" readonly />
             <div id="dtBox"></div>
     
             <script type="text/javascript">
