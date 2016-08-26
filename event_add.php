@@ -20,26 +20,26 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
 
             <label for="start" ></label>
             <input type="text" name="start" id="start" placeholder="cokolwiek" /><br>
+
+    
+            <p>DateTime : </p>
+            <input type="text" data-field="datetime" readonly>
+            <div id="dtBox"></div>
+    
+            <script type="text/javascript">
+     
+             $(document).ready(function()
+	         {
+	             $("#dtBox").DateTimePicker({
+                         minuteInterval: 30
+                     });
+	         });
+             
+            </script>
+            
         </div>
     </form>
     
-    <p>DateTime : </p>
-    <input type="text" data-field="datetime" readonly>
-    <div id="dtBox"></div>
-    
-    <script type="text/javascript">
-     
-     $(document).ready(function()
-	 {
-	     $("#dtBox").DateTimePicker({
-                 minuteInterval: 30
-             });
-	 });
-     
-    </script>
-            
-
-
 
 
       
