@@ -5,7 +5,7 @@ $pageTitle = "Add Event";
 include_once $pth . "/common/header.php";
 //include_once $pth . "/
 
-alert("eloszka");
+echo "eloszka";
 
 if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["koniec"])) {
 ?>    
