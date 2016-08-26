@@ -127,7 +127,7 @@
 
 .dtpicker-header .dtpicker-value
 {
-	padding:  0.8em 0.2em 0.2em 0.2em;
+	padding:  0.2em 0.2em 0.2em 0.2em;
 	color: #FF3B30;
 	text-align: center;
 
@@ -193,12 +193,12 @@
 .dtpicker-components .dtpicker-comp > *
 {
 	display: block;
-	height: 30px;
+	height: 1em;
 
 	color: #2980B9;
 
 	text-align: center;
-	line-height: 30px;
+	line-height: 1em;
 }
 
 .dtpicker-components .dtpicker-comp > *:hover
@@ -216,7 +216,7 @@
 	opacity: 0.5;
 }
 
-.dtpicker-components .dtpicker-compButton
+.dtpicker-components 
 {
 	background: #FFFFFF;
 	font-size: 140%;
@@ -224,9 +224,33 @@
 	cursor: pointer;
 }
 
-.dtpicker-components .dtpicker-compValue
+.dtpicker-compButton
+{
+	background: #FFFFFF;
+	font-size: 200%;
+
+	cursor: pointer;
+}
+
+.dtpicker-compValue
 {
 	margin: 0.4em 0;
+	width: 100%;
+	border: none;
+	background: #FFFFFF;
+
+	font-size: 200%;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+
+
+
+.dtpicker-components 
+{
+	margin: 0.4em 0 2em 0;
 	width: 100%;
 	border: none;
 	background: #FFFFFF;
