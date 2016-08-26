@@ -28,8 +28,8 @@ class Events
                  . "<p>The event name you've chosen is already in use.</p>"
                  . "<p>Try again. Or not. <br> I am not your supervisor</p>";
         } else {
-            $sql = "INSERT INTO Events(EventNazwa, EventStart, EventEnd)"
-                 . "VALUES ('" . $n . "', '" . $s . "', '" . $k . "')";
+            $sql = "INSERT INTO Events(EventNazwa, EventStart, EventEnd, Aktywny)"
+                 . "VALUES ('" . $n . "', '" . $s . "', '" . $k . "',1)";
             $result = $this->_db->query($sql);
             return 'Event "' . $n . '" added. <br> Well done, you.';
         }
