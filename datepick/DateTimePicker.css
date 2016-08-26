@@ -12,7 +12,8 @@
 {
 	z-index: 2000;
 	display:none;
-	min-width: 300px;
+	/*min-width bylo 300px*/
+	min-width: 100%;
 
 	background: rgba(0, 0, 0, 0.2);
 	font-size: 1em;
@@ -77,7 +78,8 @@
 	margin: 0 auto;
 	padding: 1em 0;
 
-	max-width: 500px;
+	/*bylo 500px */
+	max-width: 100%px;
 
 	background: #fff;
 }
