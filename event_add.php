@@ -5,7 +5,7 @@ $pageTitle = "Add Event";
 include_once $pth . "/common/header.php";
 //include_once $pth . "/
 
-if (empty($_POST["eventname"]) || empty($_POST["start"]) || empty($_POST["koniec"])) {
+if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["koniec"])) {
 ?>    
     <head>
         <link rel="stylesheet" type="text/css" href="/datepick/DateTimePicker.css" />
