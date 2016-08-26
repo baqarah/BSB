@@ -5,11 +5,7 @@ $pageTitle = "Add Event";
 include_once $pth . "/common/header.php";
 //include_once $pth . "/
 
-echo "eloszka";
-echo $_POST["end"];
-echo "koniec";
-
-if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["koniec"])) {
+if (empty($_POST["eventname"]) || empty($_POST["start"]) || empty($_POST["koniec"])) {
 ?>    
     <head>
         <link rel="stylesheet" type="text/css" href="/datepick/DateTimePicker.css" />
@@ -28,7 +24,7 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
             <div id="dtBox"></div>
     
             <p>End Date and Time : </p>
-            <input type="text" data-field="datetime" name="end" id="end" >
+            <input type="text" data-field="datetime" name="koniec" id="koniec" >
             <div id="dtBox"></div>
     
             <script type="text/javascript">
