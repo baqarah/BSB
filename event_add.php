@@ -19,7 +19,7 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
             <input type="text" name="eventname" id="eventname" placeholder="Event Name" /><br>
 
             <label for="start" ></label>
-            <input type="text" name="start" id="start" data-field="date-time" /><br>
+            <input type="text" name="start" id="start" data-field="date-time" readonly/><br>
         </div>
     </form>
     
@@ -27,7 +27,7 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
 		
      $(document).ready(function()
 	 {
-	     $("#dtBox").DateTimePicker({
+	     $("#start").DateTimePicker({
                  minuteInterval: 30
              });
 	 });
@@ -35,6 +35,6 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
     </script>
 
 <?php
-
+}
 include_once $pth . "/common/footer.php";
 ?>
