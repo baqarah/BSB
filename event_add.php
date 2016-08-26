@@ -16,8 +16,8 @@ if (empty($_POST["eventname"]) || empty($_POST["start"]) || empty($_POST["koniec
     <form method="post" action="event_add.php" id="eventadd">
         <div class ="formularz" >
             <h2 class="tytul">Add Event</h2>
-            <label for="eventname" ></label>
-            <input type="text" name="eventname" id="eventname" placeholder="Event Name" /><br>
+            <label for="eventnazwa" ></label>
+            <input type="text" name="eventnazwa" id="eventnazwa" placeholder="Event Name" /><br>
             
             <p>Start Date and Time:</p>
             <input type="text" data-field="datetime" name="start" id="start" readonly /><br>
@@ -56,7 +56,8 @@ if (empty($_POST["eventname"]) || empty($_POST["start"]) || empty($_POST["koniec
 <?php
 }
 
-if (!empty($_POST['eventnazwa']) && !empty($_POST['start']) && !empty($POST['koniec'])) {
+if (!empty($_POST["eventnazwa"]) && !empty($_POST["start"]) && !empty($POST["koniec"])) {
+    echo "wszystko jest niepuste";
     include_once $pth . "/inc/class.events.inc.php";
     $events = new Events($db);
     echo $users ->createEvent();
