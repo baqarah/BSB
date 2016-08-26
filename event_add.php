@@ -6,6 +6,8 @@ include_once $pth . "/common/header.php";
 //include_once $pth . "/
 
 echo "eloszka";
+echo $_POST["end"];
+echo "koniec";
 
 if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["koniec"])) {
 ?>    
@@ -26,7 +28,7 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
 
     
             <p>DateTime : </p>
-            <input type="text" data-field="datetime" readonly>
+            <input type="text" data-field="datetime" name="end" id="end" >
             <div id="dtBox"></div>
     
             <script type="text/javascript">
