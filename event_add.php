@@ -4,6 +4,9 @@ include_once $pth . "/common/base.php";
 $pageTitle = "Add Event";
 include_once $pth . "/common/header.php";
 //include_once $pth . "/
+
+alert("eloszka");
+
 if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["koniec"])) {
 ?>    
     <head>
@@ -36,6 +39,14 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
 	         });
              
             </script>
+
+            <br>
+            <input type="submit" name="create" id="create" value="Add event" />
+
+
+            
+
+            
             
         </div>
     </form>
