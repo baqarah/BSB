@@ -54,6 +54,14 @@ if (empty($_POST["eventname"]) || empty($_POST["start"]) || empty($_POST["koniec
       
 
 <?php
+exit;
 }
+
+if (!empty($_POST['eventnazwa']) && !empty($_POST['start']) && !empty $POST['koniec']) {
+    include_once $pth . "/inc/class.events.inc.php";
+    $events = new Events($db);
+    echo $users ->createEvent();
+}
+
 include_once $pth . "/common/footer.php";
 ?>
