@@ -5,6 +5,7 @@ $pageTitle = "Add Event";
 include_once $pth . "/common/header.php";
 //include_once $pth . "/
 
+
 if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["koniec"])) {
 ?>    
     <head>
@@ -56,7 +57,7 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
 <?php
 }
 
-if (!empty($_POST["eventnazwa"]) && !empty($_POST["start"]) && !empty($POST["koniec"])) {
+if (!empty($_POST["eventnazwa"]) && !empty($_POST["start"]) && !empty($_POST["koniec"])) {
     echo "wszystko jest niepuste";
     include_once $pth . "/inc/class.events.inc.php";
     $events = new Events($db);
