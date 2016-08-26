@@ -22,12 +22,12 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
             <h2 class="tytul">Add Event</h2>
             <label for="eventname" ></label>
             <input type="text" name="eventname" id="eventname" placeholder="Event Name" /><br>
-
-            <label for="start" ></label>
-            <input type="text" name="start" id="start" placeholder="cokolwiek" /><br>
-
+            
+            <p>Start Date and Time:</p>
+            <input type="text" data-field="datetime" name="start" id="start" /><br>
+            <div id="dtBox"></div>
     
-            <p>DateTime : </p>
+            <p>End Date and Time : </p>
             <input type="text" data-field="datetime" name="end" id="end" >
             <div id="dtBox"></div>
     
