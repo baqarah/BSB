@@ -60,7 +60,7 @@ if (!empty($_POST["eventnazwa"]) && !empty($_POST["start"]) && !empty($POST["kon
     echo "wszystko jest niepuste";
     include_once $pth . "/inc/class.events.inc.php";
     $events = new Events($db);
-    echo $users ->createEvent();
+    echo $events->createEvent();
 }
 
 include_once $pth . "/common/footer.php";
