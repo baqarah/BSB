@@ -16,7 +16,7 @@
 	min-width: 100%;
 
 	background: rgba(0, 0, 0, 0.2);
-	font-size: 2em;
+	font-size: 1em;
 
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -103,7 +103,7 @@
 {
 	color: #2980B9;
 	text-align: center;
-	font-size: 2.2em;
+	font-size: 1.1em;
 }
 
 .dtpicker-header .dtpicker-close
@@ -115,7 +115,7 @@
 	padding: 0.5em 0.5em 1em 1em;
 	
 	color: #FF3B30;
-	font-size: 3em;
+	font-size: 1.5em;
 	
 	cursor: pointer;
 }
@@ -131,7 +131,7 @@
 	color: #FF3B30;
 	text-align: center;
 
-	font-size: 2.8em;
+	font-size: 1.4em;
 }
 
 .dtpicker-components
@@ -139,7 +139,7 @@
 	overflow: hidden;
 	margin: 1em 1em;
 	
-	font-size: 2.6em;
+	font-size: 1.3em;
 }
 
 .dtpicker-components *
@@ -257,7 +257,7 @@
 	background: #FF3B30;
 	color: #FFFFFF;
 	text-align: center;
-	font-size: 2.6em;
+	font-size: 1.3em;
 
 	cursor: pointer;
 }
