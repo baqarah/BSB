@@ -28,7 +28,7 @@ class BSBUsers
             
         $row = $result->fetch_assoc();
         if($row['theCount']!=0){
-            return "<h2> Error</h>"
+            return "<h2> Error</h2>"
                  . "<p> Your account name is already in use. </p>"
                  . "<p> Try again. Or not.<br> I am not your supervisor </p>";
         } else {
