@@ -58,7 +58,7 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
 }
 
 if (!empty($_POST["eventnazwa"]) && !empty($_POST["start"]) && !empty($_POST["koniec"])) {
-    echo "wszystko jest niepuste";
+    echo ">" . $_POST['start'] . "<   #   >" . $_POST['koniec'] . "<";
     include_once $pth . "/inc/class.events.inc.php";
     $events = new Events($db);
     echo $events->createEvent();
