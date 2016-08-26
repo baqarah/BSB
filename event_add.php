@@ -23,7 +23,16 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
         </div>
     </form>
     
-
+    <script type="text/javascript">
+		
+     $(document).ready(function()
+	 {
+	     $("#dtBox").DateTimePicker({
+                 minuteInterval: 30
+             });
+	 });
+		
+    </script>
 
 <?php
 
