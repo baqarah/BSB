@@ -24,7 +24,7 @@ class Events
         // bierze liste eventow:
 
         //_activelist:
-        $sql = "SELECT e.ID_Event"
+        $sql = "SELECT e.ID_Event as IDs"
               ."FROM Events e, Events_Rozdanie b, Rozdanie r"
               ."WHERE e.ID_Event = b.ID_Event "
               ."AND b.ID_Rozdanie = r.ID_Rozdanie "
@@ -32,7 +32,7 @@ class Events
         
         $result = $this->_db->query($sql);
         $row = $result->fetch_assoc();
-        $this->_activelist = $row['ID_Event'];
+        $this->_activelist = $row['IDs'];
     }
 
     public function createEvent()
