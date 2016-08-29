@@ -100,13 +100,17 @@ class Events
         
         $result = $this->_db->query($sql);
 
-        while ($row = $result->fetch_assoc()) {
-            echo $row['User'];
-        }
+        //while ($row = $result->fetch_assoc()) {
+        //    echo $row['User'];
+        //}
 
-        $row = $result->fetch_assoc();
-        $efekt = $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'] . "<br>";
+        //$row = $result->fetch_assoc();
+        //$efekt = $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'] . "<br>";
 
+        $a = $result->fetchAll(PDO::FETCH_ASSOC);
+        
+        print_r($a);
+        
         return $efekt;
             
 
