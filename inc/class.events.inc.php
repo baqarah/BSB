@@ -104,6 +104,7 @@ class Events
             echo $row['User'];
         }
 
+        $result = $this->_db->query($sql);
         $efekt = $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'] . "<br>";
 
         return $efekt;
