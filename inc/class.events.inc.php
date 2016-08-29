@@ -80,6 +80,9 @@ class Events
             $result = $this->_db->query($sql);
             return 'Event "' . $n . '" added. <br> Well done, you.';
         }
+
+        // --- TUTAJ TRZEBA DODAC AUTO LOSOWANIE ROZDANIA
+        
     }
 
     public function testas()
@@ -89,7 +92,15 @@ class Events
 
     public function showEvent($id)
     {
-        return "<br>dziala " . $id . "<br>";
+        $sql = "SELECT e.EventNazwa as Nazwa, e.EventStart as Start, e.EventEnd as Koniec, u.UserName as User "
+              ."FROM Events e, Events_Rozdanie b, Rozdanie r, Users u "
+               ."WHERE e.ID_Event = " . $id
+              ." AND e.ID_Event = b.ID_Event AND b.ID_Rozdanie = r.ID_Rozdanie AND r.UserID = u.UserID";
+              
+        $result = $this->_db->query($sql);
+        $row = $result->fetch_assoc();
+        
+        return $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'];
     }
     
 }
