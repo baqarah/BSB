@@ -15,19 +15,24 @@ class Events
         } else {
             $this->_db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         }
-
+                
         $sql = "SELECT UserID FROM Users WHERE UserName = '" . $_SESSION['Username'] . "'";
         $result = $this->_db->query($sql);
         $row = $result->fetch_assoc();
         $this->_userid = $row['UserID'];
-        
-
+       
         // bierze liste eventow:
 
         //_activelist:
-       // $sql = "SELECT ID_Event FROM"
-       //       ."Events JOIN Event_Rozdanie JOIN 
+        $sql = "SELECT e.ID_Event"
+              ."FROM Events e, Event_Rozdanie b, Rozdanie r"
+              ."WHERE e.ID_Event = b.ID_Event "
+              ."AND b.ID_Rozdanie = r.ID_Rozdanie "
+              ."AND e.Aktywny = 1 AND r.UserID ='" . $this->_userid . "'";
         
+        $result = $this->_db->query($sql);
+        $row = $result->fetch_assoc();
+        $this->_activelist = $row['ID_Event'];
     }
 
     public function createEvent()
@@ -52,9 +57,9 @@ class Events
         }
     }
 
-    public function testUserId()
+    public function test()
     {
-        return $this->_userid;
+        return $this->_activelist;
     }   
     
 }
