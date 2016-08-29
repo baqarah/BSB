@@ -56,8 +56,7 @@ class Events
         //echo $sql;
         $result = $this->_db->query($sql);
         $row = $result->fetch_assoc(); 
-        $this->_otherlist = $row['IDs'];        
-        
+        $this->_otherlist = $row['IDs'];
         
     }
 
@@ -87,6 +86,12 @@ class Events
     {
         return $this->_otherlist;
     }   
+
+    public function showEvent($id)
+    {
+        $var = $id
+        return echo "dziala " . $var;
+    }
     
 }
 ?>
