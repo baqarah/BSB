@@ -6,7 +6,7 @@ class Events
     private $_userid;    // username, ulatwi robienie kwerend eventowych
     private $_activelist;  // lista aktywnych eventow w ktorych sie nie partycypuje
     private $_partlist;    // lista aktywnych eventow w ktorych sie partycypuje
-    private $_oterlist     // lista nieaktywnych eventow
+    private $_otherlist;     // lista nieaktywnych eventow
 
     public function __construct($db=NULL)
     {
