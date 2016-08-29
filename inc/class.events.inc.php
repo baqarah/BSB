@@ -32,7 +32,7 @@ class Events
         
         $result = $this->_db->query($sql);
         $row = $result->fetch_assoc();
-        $this->_activelist = $row['IDs'];
+        //$this->_activelist = $row['IDs'];
     }
 
     public function createEvent()
