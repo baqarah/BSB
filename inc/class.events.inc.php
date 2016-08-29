@@ -3,6 +3,10 @@
 class Events
 {
     private $_db;
+    private $_userid;    // username, ulatwi robienie kwerend eventowych
+    private $_activelist;  // lista aktywnych eventow w ktorych sie nie partycypuje
+    private $_partlist;    // lista aktywnych eventow w ktorych sie partycypuje
+    private $_oterlist     // lista nieaktywnych eventow
 
     public function __construct($db=NULL)
     {
@@ -11,6 +15,19 @@ class Events
         } else {
             $this->_db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         }
+
+        $sql = "SELECT UserID FROM Users WHERE UserName = '" . $_SESSION['Username'] . "'";
+        $result = $this_db->query($sql);
+        $row = $result->fetch_assoc();
+        $_userid = $row['UserID'];
+        
+
+        // bierze liste eventow:
+
+        //_activelist:
+       // $sql = "SELECT ID_Event FROM"
+       //       ."Events JOIN Event_Rozdanie JOIN 
+        
     }
 
     public function createEvent()
@@ -33,6 +50,11 @@ class Events
             $result = $this->_db->query($sql);
             return 'Event "' . $n . '" added. <br> Well done, you.';
         }
+    }
+
+    public testUserId()
+    {
+        return $this->$_userid;
     }
     
     
