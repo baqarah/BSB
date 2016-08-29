@@ -42,7 +42,7 @@ class Events
               ."AND b.ID_Rozdanie = r.ID_Rozdanie "
               ."AND e.Aktywny = 1 AND r.UserID <>" . $this->_userid;
 
-        //echo $sql;
+        echo $sql;
         $result = $this->_db->query($sql);
         $row = $result->fetch_assoc(); 
         $this->_activelist = $row['IDs'];
