@@ -87,7 +87,7 @@ class Events
         return $this->_otherlist;
     }   
 
-    public function showEvent(&$id)
+    public function showEvent($id)
     {
         return "<br>dziala " . $id . "<br>";
     }
