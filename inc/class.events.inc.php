@@ -16,10 +16,10 @@ class Events
             $this->_db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         }
 
-        $sql = "SELECT UserID FROM Users WHERE UserName = '" . $_SESSION['Username'] . "'";
-        $result = $this->_db->query($sql);
-        $row = $result->fetch_assoc();
-        $_userid = $row['UserID'];
+        //$sql = "SELECT UserID FROM Users WHERE UserName = '" . $_SESSION['Username'] . "'";
+        //$result = $this->_db->query($sql);
+        //$row = $result->fetch_assoc();
+        //$_userid = $row['UserID'];
         
 
         // bierze liste eventow:
@@ -51,13 +51,7 @@ class Events
             return 'Event "' . $n . '" added. <br> Well done, you.';
         }
     }
-
-    public testUserId()
-    {
-        
-        return $this->$_userid;
-    }
-    
+  
     
 }
 ?>
