@@ -28,7 +28,7 @@ class Events
               ."FROM Events e, Events_Rozdanie b, Rozdanie r "
               ."WHERE e.ID_Event = b.ID_Event "
               ."AND b.ID_Rozdanie = r.ID_Rozdanie "
-              ."AND e.Aktywny = 1 AND r.UserID =1"; //. $this->_userid;
+              ."AND e.Aktywny = 1 AND r.UserID =1" . $this->_userid;
         
         //$result = $this->_db->query($sql);
         //$row = $result->fetch_assoc();
