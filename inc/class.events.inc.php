@@ -31,7 +31,7 @@ class Events
               ."AND e.Aktywny = 1 AND r.UserID =" . $this->_userid;
         
         $result = $this->_db->query($sql);
-        $row = $result->fetch_assoc();
+        $row = $result->fetch_assoc(); 
         //$this->_activelist = $row['IDs'];
     }
 
