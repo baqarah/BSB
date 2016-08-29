@@ -6,7 +6,7 @@ include_once $pth . "/inc/class.events.inc.php";
 
 
 $events = new Events($db);
-echo "test  >" . $events->test() . "<";
+echo "test  >" . $events->testas() . "<";
 
 echo "<h2>Tutaj bedzie strona z eventami wszystkimi</h2>";
 echo '<a href="/event_add.php">DODAJ EVENT</a>';
