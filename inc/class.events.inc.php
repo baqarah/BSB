@@ -104,7 +104,7 @@ class Events
             echo $row['User'];
         }
 
-        $row = $result->fetch_assoc()
+        $row = $result->fetch_assoc();
         $efekt = $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'] . "<br>";
 
         return $efekt;
