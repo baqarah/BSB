@@ -52,10 +52,10 @@ class Events
         }
     }
 
-    public function testUserId()
-    {
-        return $this->_userid;
-    }   
+    //public function testUserId()
+    //{
+    //    return $this->_userid;
+    //}   
     
 }
 ?>
