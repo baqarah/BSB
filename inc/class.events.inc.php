@@ -107,9 +107,9 @@ class Events
         //$row = $result->fetch_assoc();
         //$efekt = $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'] . "<br>";
 
-        $a = $result->fetchAll(PDO::FETCH_ASSOC);
+        $a = $result->fetchAll();
         
-        //print_r($a);
+        print_r($a);
         
         return "dziala";
             
