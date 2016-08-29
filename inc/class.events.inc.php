@@ -90,7 +90,7 @@ class Events
     public function showEvent($id)
     {
         $var = $id
-        return echo "dziala " . $var;
+        return "dziala " . $var;
     }
     
 }
