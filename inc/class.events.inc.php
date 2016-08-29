@@ -89,8 +89,7 @@ class Events
 
     public function showEvent($id)
     {
-        $var = $id
-        return "dziala " . $var;
+        return "dziala " . $id;
     }
     
 }
