@@ -28,10 +28,10 @@ class Events
               ."FROM Events e, Events_Rozdanie b, Rozdanie r "
               ."WHERE e.ID_Event = b.ID_Event "
               ."AND b.ID_Rozdanie = r.ID_Rozdanie "
-              ."AND e.Aktywny = 1 AND r.UserID =" . $this->_userid;
+              ."AND e.Aktywny = 1 AND r.UserID =1"// . $this->_userid;
         
         $result = $this->_db->query($sql);
-        $row = $result->fetch_assoc();
+        //$row = $result->fetch_assoc();
         //$this->_activelist = $row['IDs'];
     }
 
@@ -59,7 +59,7 @@ class Events
 
     public function testas()
     {
-        return $this->_activelist;
+        return $this->_userid;
     }   
     
 }
