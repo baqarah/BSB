@@ -4,7 +4,8 @@ include_once $pth . "/common/base.php";
 include_once $pth . "/common/header.php";
 include_once $pth . "/inc/class.events.inc.php";
 
-$events = new Events;
+echo $_SESSION['Username'];
+//$events = new Events;
 echo "ID User:" . "asdasd" . "koniec";
 
 echo "<h2>Tutaj bedzie strona z eventami wszystkimi</h2>";
