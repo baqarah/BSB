@@ -42,12 +42,21 @@ class Events
               ."AND b.ID_Rozdanie = r.ID_Rozdanie "
               ."AND e.Aktywny = 1 AND r.UserID <>" . $this->_userid;
 
-        echo $sql;
+        //echo $sql;
+
+        //_otherlist;
         $result = $this->_db->query($sql);
         $row = $result->fetch_assoc(); 
         $this->_activelist = $row['IDs'];
 
-        
+        $sql = "SELECT e.ID_Event as IDs "
+              ."FROM Events e "
+              ."WHERE e.Aktywny = 0";
+
+        //echo $sql;
+        $result = $this->_db->query($sql);
+        $row = $result->fetch_assoc(); 
+        $this->_otherlist = $row['IDs'];        
         
         
     }
@@ -76,7 +85,7 @@ class Events
 
     public function testas()
     {
-        return $this->_activelist;
+        return $this->_otherlist;
     }   
     
 }
