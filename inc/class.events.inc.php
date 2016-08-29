@@ -19,7 +19,7 @@ class Events
         $sql = "SELECT UserID FROM Users WHERE UserName = '" . $_SESSION['Username'] . "'";
         $result = $this->_db->query($sql);
         $row = $result->fetch_assoc();
-        $this->_userid = $row['UserID'];
+        //$this->_userid = $row['UserID'];
         
 
         // bierze liste eventow:
