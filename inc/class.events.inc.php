@@ -17,7 +17,7 @@ class Events
         }
 
         $sql = "SELECT UserID FROM Users WHERE UserName = '" . $_SESSION['Username'] . "'";
-        $result = $this_db->query($sql);
+        $result = $this->_db->query($sql);
         $row = $result->fetch_assoc();
         $_userid = $row['UserID'];
         
@@ -54,6 +54,7 @@ class Events
 
     public testUserId()
     {
+        
         return $this->$_userid;
     }
     
