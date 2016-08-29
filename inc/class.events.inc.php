@@ -98,12 +98,9 @@ class Events
               ." AND e.ID_Event = b.ID_Event AND b.ID_Rozdanie = r.ID_Rozdanie AND r.UserID = u.UserID";
               
         $result = $this->_db->query($sql);
-        $row = $result->fetch_assoc();
-
-
-        $efekt = $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'] . "<br>";
 
         while ($row = $result->fetch_assoc()) {
+            $efekt = $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'] . "<br>";
             echo $row['Users'];
         }
         
