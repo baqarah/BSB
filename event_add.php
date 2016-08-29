@@ -18,7 +18,7 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
         <div class ="formularz" >
             <h2 class="tytul">Add Event</h2>
             <label for="eventnazwa" ></label>
-            <input type="text" name="eventnazwa" id="eventnazwa" placeholder="Event Name" /><br>
+            <input type="text" name="eventnazwa" id="eventnazwa" placeholder="Event Name" autofocus/><br>
             
             <p>Start Date and Time:</p>
             <input type="text" data-field="datetime" data-format="yyyy-MM-dd HH:mm" name="start" id="start" readonly /><br>

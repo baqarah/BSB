@@ -13,7 +13,7 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
         <div class="formularz">
             <h2 class="tytul">Sign up</h2>
             <label for="username"></label>
-            <input type="text" name="username" id="username" placeholder="User Name" /><br>
+            <input type="text" name="username" id="username" placeholder="User Name" autofocus/><br>
 
             <label for="password"></label>
             <input type="password" name="password" id="password" placeholder="Password" /><br>
@@ -37,7 +37,7 @@ if (empty($_POST["username"]) || empty($_POST["password"])) {
             <h2 class="tytul">Sign up</h2>
 
             <label for="username"></label>
-            <input type="text" name="username" id="username" placeholder="User Name" /><br>
+            <input type="text" name="username" id="username" placeholder="User Name" autofocus/><br>
             
             <label for="password"></label>
             <input type="password" name="password" id="password" placeholder="Password"/><br>
