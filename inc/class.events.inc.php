@@ -16,9 +16,9 @@ class Events
             $this->_db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         }
 
-        $sql = "SELECT UserID FROM Users WHERE UserName = '" . $_SESSION['Username'] . "'";
-        $result = $this->_db->query($sql);
-        $row = $result->fetch_assoc();
+        //$sql = "SELECT UserID FROM Users WHERE UserName = '" . $_SESSION['Username'] . "'";
+        //$result = $this->_db->query($sql);
+        //$row = $result->fetch_assoc();
         //$this->_userid = $row['UserID'];
         
 
