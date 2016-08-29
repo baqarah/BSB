@@ -99,8 +99,18 @@ class Events
               
         $result = $this->_db->query($sql);
         $row = $result->fetch_assoc();
+
+
+        $efekt = $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'] . "<br>";
+
+        while ($row) {
+            echo $row['Users'];
+        }
         
-        return $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'];
+
+        return $efekt;
+            
+
     }
     
 }
