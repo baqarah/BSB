@@ -109,9 +109,9 @@ class Events
 
         $a = $result->fetchAll(PDO::FETCH_ASSOC);
         
-        print_r($a);
+        //print_r($a);
         
-        return $efekt;
+        return "dziala";
             
 
     }
