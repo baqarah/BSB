@@ -107,7 +107,7 @@ class Events
         //$row = $result->fetch_assoc();
         //$efekt = $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'] . "<br>";
 
-        $a = $result->fetchAll();
+        $a = $result->fetch_assoc();
         
         print_r($a);
         
