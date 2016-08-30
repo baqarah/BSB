@@ -128,14 +128,14 @@ class Events
                           ."<span>" . $row['Koniec'] . "</span>"
                           ."</p>"
                           ."</div>";
-            $userlist .= "<p class='usersevent'>" . $row['User'] . "</p>";
+            $userlist .= "<p class='usersevent" . $id ."'>" . $row['User'] . "</p>";
         }
 
 
         $javascript = "<script>"
                      ."function ukryj" . $id . "(){"
-                     ."var x = document.document.getElementsByClassName('usersevent');"
-                     ."x.style.visibility = 'hidden';"
+                     ."var x = document.getElementsByClassName('usersevent".$id ."');"
+                     ."x[0].style.visibility = 'hidden';"
                      ."}"
                      ."</script>";
         
