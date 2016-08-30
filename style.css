@@ -130,3 +130,10 @@ input {
 #menu-header {
     padding-top: 0.5em;
 }
+
+.headevent {
+    width: 100%;
+    text-align: center;
+    border: .1em solid white;
+    background-color: #cccccc;
+}

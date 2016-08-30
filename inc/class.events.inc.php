@@ -110,7 +110,7 @@ class Events
                           ."<p>"
                           ."<span>" . $row['Nazwa'] . " |  </span>"
                           ."<span>" . $row['Start'] . " | </span>"
-                          ."<span>" . $row['Koniec'] . " | </span>"
+                          ."<span>" . $row['Koniec'] . "</span>"
                           ."</p>"
                           ."</div>";
             $userlist .= "<p class='usersevent'>" . $row['User'] . "</p>";
