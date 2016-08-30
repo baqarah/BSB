@@ -4,9 +4,9 @@ class Events
 {
     private $_db;
     private $_userid;    // username, ulatwi robienie kwerend eventowych
-    private $_activelist;  // lista aktywnych eventow w ktorych sie nie partycypuje
-    private $_partlist;    // lista aktywnych eventow w ktorych sie partycypuje
-    private $_otherlist;     // lista nieaktywnych eventow
+    public $_activelist;  // lista aktywnych eventow w ktorych sie nie partycypuje
+    public $_partlist;    // lista aktywnych eventow w ktorych sie partycypuje
+    public $_otherlist;     // lista nieaktywnych eventow
 
     public function __construct($db=NULL)
     {
@@ -45,22 +45,33 @@ class Events
               ."WHERE e.ID_Event = b.ID_Event "
               ."AND b.ID_Rozdanie = r.ID_Rozdanie "
               ."AND e.Aktywny = 1 AND r.UserID <>" . $this->_userid;
-
         //echo $sql;
-
-        //_otherlist;
+        $b = array();
+        
         $result = $this->_db->query($sql);
-        $row = $result->fetch_assoc(); 
-        $this->_activelist = $row['IDs'];
+        while ($row = $result->fetch_assoc()) { 
+            $b[]=$row['IDs'];
+        }
+        $this->_activelist = $b;
+        
 
+
+        
+        
         $sql = "SELECT e.ID_Event as IDs "
               ."FROM Events e "
               ."WHERE e.Aktywny = 0";
 
         //echo $sql;
+
+        //echo $sql;
+        $c = array();
+        
         $result = $this->_db->query($sql);
-        $row = $result->fetch_assoc(); 
-        $this->_otherlist = $row['IDs'];
+        while ($row = $result->fetch_assoc()) { 
+            $c[]=$row['IDs'];
+        }
+        $this->_otherlist = $c;
         
     }
 
