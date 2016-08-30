@@ -103,18 +103,20 @@ class Events
         
         $result = $this->_db->query($sql);
 
-        //while ($row = $result->fetch_assoc()) {
-        //    echo $row['User'];
-        //}
-
-        //$row = $result->fetch_assoc();
-        //$efekt = $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'] . "<br>";
-
-            //$a = $kwer->fetchAll(PDO::FETCH_ASSOC);
-            $a = $result->fetch_assoc();
-            print_r($a);
+        // --- jakis sposob, zeby nie fetchowac po linijce? :/
         
-            return "dziala";        
+        while ($row = $result->fetch_assoc()) {
+            $headerevent = "<div class='headevent'>"
+                          ."<p>"
+                          ."<span>" . $row['Nazwa'] . " |  </span>"
+                          ."<span>" . $row['Start'] . " | </span>"
+                          ."<span>" . $row['Koniec'] . " | </span>"
+                          ."</p>"
+                          ."</div>";
+            $userlist .= "<p class='usersevent'>" . $row['User'] . "</p>";
+        }
+
+        return $headerevent . $userlist;
             
     }
     
