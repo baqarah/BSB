@@ -17,6 +17,7 @@ foreach ($events->_partlist as $value) {
     //$events->showEvent($value);
 }
 
+$events->showEvent(4);
 
 //echo $events->showEvent(4);
 echo '<a href="/event_add.php">DODAJ EVENT</a>';
