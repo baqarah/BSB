@@ -121,7 +121,7 @@ class Events
         // --- jakis sposob, zeby nie fetchowac po linijce? :/
         
         while ($row = $result->fetch_assoc()) {
-            $headerevent = "<div class='headevent' onclick='ukryj" . $id . "'>"
+            $headerevent = "<div class='headevent' onclick='ukryj" . $id . "()'>"
                           ."<p>"
                           ."<span>" . $row['Nazwa'] . " |  </span>"
                           ."<span>" . $row['Start'] . " | </span>"
