@@ -13,7 +13,8 @@ print_r($events->_otherlist);
 //print_r($events->_activelist
 
 foreach ($events->_partlist as $value) {
-    $events->showEvent($value);
+    echo $value;
+    //$events->showEvent($value);
 }
 
 
