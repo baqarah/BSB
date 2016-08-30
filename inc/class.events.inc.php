@@ -139,7 +139,7 @@ class Events
                      ."}"
                      ."</script>";
         
-        return $headerevent . $userlist;
+        return $headerevent . $userlist . $javascript;
             
     }
 
