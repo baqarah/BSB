@@ -123,6 +123,12 @@ class Events
         return $headerevent . $userlist;
             
     }
+
+    public function wrocPart() {
+        return $this->_partlist;
+    }
+    
+
     
 }
 ?>

@@ -6,7 +6,7 @@ include_once $pth . "/inc/class.events.inc.php";
 
 $events = new Events($db);
 
-print_r($events->_partlist);
+print_r($events->wrocPart());
 //print_r($events->_activelist
 
 
