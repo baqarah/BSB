@@ -7,14 +7,23 @@ include_once $pth . "/inc/class.events.inc.php";
 $events = new Events($db);
 
 
-print_r($events->_partlist);
-print_r($events->_activelist);
-print_r($events->_otherlist);
-//print_r($events->_activelist
-
+echo "Partycypujesz w: ";
 foreach ($events->_partlist as $value) {
     echo $events->showEvent($value);
 }
+
+echo "Inne aktywne w: ";
+foreach ($events->_activelist as $value) {
+    echo $events->showEvent($value);
+}
+
+echo "Nieaktyne: ";
+foreach ($events->_otherlist as $value) {
+    echo $events->showEvent($value);
+}
+
+
+
 
 // $events->showEvent(4);
 echo '<a href="/event_add.php">DODAJ EVENT</a>';
