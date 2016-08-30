@@ -97,8 +97,12 @@ class Events
                ."WHERE e.ID_Event = " . $id
               ." AND e.ID_Event = b.ID_Event AND b.ID_Rozdanie = r.ID_Rozdanie AND r.UserID = u.UserID";
         //echo $sql;
+
+
+        $kwer = $this->_db->prepare($sql);
+        $kwer->exectute();
         
-        $result = $this->_db->query($sql);
+        //$result = $this->_db->query($sql);
 
         //while ($row = $result->fetch_assoc()) {
         //    echo $row['User'];
@@ -107,7 +111,7 @@ class Events
         //$row = $result->fetch_assoc();
         //$efekt = $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'] . "<br>";
 
-        $a = $result->fetchAll();
+        $a = $kwer->fetchAll(PDO::FETCH_ASSOC);
         
         print_r($a);
         
