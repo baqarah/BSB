@@ -99,10 +99,9 @@ class Events
         //echo $sql;
 
 
-        $kwer = $this->_db->prepare($sql);
-        $success = $kwer->execute();
+
         
-        //$result = $this->_db->query($sql);
+        $result = $this->_db->query($sql);
 
         //while ($row = $result->fetch_assoc()) {
         //    echo $row['User'];
@@ -110,18 +109,13 @@ class Events
 
         //$row = $result->fetch_assoc();
         //$efekt = $row['Nazwa'] . " | " . $row['Start'] . " | " . $row['Koniec'] . "<br>";
-        if($success) {
+
             //$a = $kwer->fetchAll(PDO::FETCH_ASSOC);
-            $a = $kwer->fetch_assoc();
+            $a = $result->fetch_assoc();
             print_r($a);
         
-            return "dziala";
-        } else {
-            echo "nie dziala";
-        }
-        
+            return "dziala";        
             
-
     }
     
 }
