@@ -121,7 +121,7 @@ class Events
         // --- jakis sposob, zeby nie fetchowac po linijce? :/
         
         while ($row = $result->fetch_assoc()) {
-            $headerevent = "<div class='headevent' onclick='ukryj" . $id "'>"
+            $headerevent = "<div class='headevent' onclick='ukryj" . $id . "'>"
                           ."<p>"
                           ."<span>" . $row['Nazwa'] . " |  </span>"
                           ."<span>" . $row['Start'] . " | </span>"
@@ -132,12 +132,12 @@ class Events
         }
 
 
-//        $javascript = "<script>"
- //                    ."function ukryj" . $id . "(){"
-  //                   ."var x = document.document.getElementsByClassName('usersevent');"
-   //                  ."x.style.visibility = 'hidden';"
-    //                 ."}"
-     //                ."</script>";
+        $javascript = "<script>"
+                     ."function ukryj" . $id . "(){"
+                     ."var x = document.document.getElementsByClassName('usersevent');"
+                     ."x.style.visibility = 'hidden';"
+                     ."}"
+                     ."</script>";
         
         return $headerevent . $userlist;
             
