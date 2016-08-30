@@ -132,12 +132,12 @@ class Events
         }
 
 
-        $javascript = "<script>"
-                    . "function ukryj" . $id . "(){"
-                     ."var x = document.document.getElementsByClassName('usersevent');"
-                     ."x.style.visibility = 'hidden';"
-                     ."}"
-                     ."</script>";
+//        $javascript = "<script>"
+ //                    ."function ukryj" . $id . "(){"
+  //                   ."var x = document.document.getElementsByClassName('usersevent');"
+   //                  ."x.style.visibility = 'hidden';"
+    //                 ."}"
+     //                ."</script>";
         
         return $headerevent . $userlist;
             
