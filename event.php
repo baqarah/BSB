@@ -12,7 +12,7 @@ foreach ($events->_partlist as $value) {
     echo $events->showEvent($value);
 }
 
-echo "Inne aktywne w: ";
+echo "Inne aktywne: ";
 foreach ($events->_activelist as $value) {
     echo $events->showEvent($value);
 }
