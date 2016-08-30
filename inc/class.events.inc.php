@@ -31,10 +31,14 @@ class Events
               ."AND e.Aktywny = 1 AND r.UserID =" . $this->_userid;
 
         //echo $sql;
+        $a = array();
+        
         $result = $this->_db->query($sql);
-        $row = $result->fetch_assoc(); 
-        $this->_partlist = $row['IDs'];
-
+        while ($row = $result->fetch_assoc()) { 
+            $a[]=$row['IDs'];
+        }
+        $this->_partlist = $a;
+        
         //_activelist:
         $sql = "SELECT e.ID_Event as IDs "
               ."FROM Events e, Events_Rozdanie b, Rozdanie r "
