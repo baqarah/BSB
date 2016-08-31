@@ -3,33 +3,50 @@
 class Events
 {
     private $_db;
-    private $_userid;    // username, ulatwi robienie kwerend eventowych
-    public $_activelist;  // lista aktywnych eventow w ktorych sie nie partycypuje
-    public $_partlist;    // lista aktywnych eventow w ktorych sie partycypuje
-    public $_otherlist;     // lista nieaktywnych eventow
+    private $_userid;
+    //private $_partlist;
+    private $_activelist;
+    private $_otherlist;
 
-    public function __construct($db=NULL)
+
+    public function __construct($db = NULL, $username)
     {
         if(is_object($db)) {
             $this->_db = $db;
         } else {
             $this->_db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         }
-                
-        $sql = "SELECT UserID FROM Users WHERE UserName = '" . $_SESSION['Username'] . "'";
+
+        $sql = "SELECT UserID FROM Users WHERE UserName = '" . $username . "'";
         $result = $this->_db->query($sql);
         $row = $result->fetch_assoc();
         $this->_userid = $row['UserID'];
-       
-        // bierze liste eventow:
+    }
 
-        //_partlist:
+    public function getPartList();
+    {
         $sql = "SELECT e.ID_Event as IDs "
               ."FROM Events e, Events_Rozdanie b, Rozdanie r "
               ."WHERE e.ID_Event = b.ID_Event "
               ."AND b.ID_Rozdanie = r.ID_Rozdanie "
               ."AND e.Aktywny = 1 AND r.UserID =" . $this->_userid;
 
+        $a = array();
+        
+        $result = $this->_db->query($sql);
+        while ($row = $result->fetch_assoc()) { 
+            $a[]=$row['IDs'];
+        }
+        return $a;
+    }
+
+    public function getActiveList()
+    {
+        $sql = "SELECT e.ID_Event as IDs "
+              ."FROM Events e, Events_Rozdanie b, Rozdanie r "
+              ."WHERE e.ID_Event = b.ID_Event "
+              ."AND b.ID_Rozdanie = r.ID_Rozdanie "
+              ."AND e.Aktywny = 1 AND r.UserID <>" . $this->_userid;
         //echo $sql;
         $a = array();
         
@@ -37,41 +54,22 @@ class Events
         while ($row = $result->fetch_assoc()) { 
             $a[]=$row['IDs'];
         }
-        $this->_partlist = $a;
-        
-        //_activelist:
-        $sql = "SELECT e.ID_Event as IDs "
-              ."FROM Events e, Events_Rozdanie b, Rozdanie r "
-              ."WHERE e.ID_Event = b.ID_Event "
-              ."AND b.ID_Rozdanie = r.ID_Rozdanie "
-              ."AND e.Aktywny = 1 AND r.UserID <>" . $this->_userid;
-        //echo $sql;
-        $b = array();
-        
-        $result = $this->_db->query($sql);
-        while ($row = $result->fetch_assoc()) { 
-            $b[]=$row['IDs'];
-        }
-        $this->_activelist = $b;
-        
+        return $a;
+    }
 
-
-        
-        
+    public function getOtherList()
+    {
         $sql = "SELECT e.ID_Event as IDs "
               ."FROM Events e "
               ."WHERE e.Aktywny = 0";
-
-        //echo $sql;
-
-        //echo $sql;
-        $c = array();
+        
+        $a = array();
         
         $result = $this->_db->query($sql);
         while ($row = $result->fetch_assoc()) { 
-            $c[]=$row['IDs'];
+            $a[]=$row['IDs'];
         }
-        $this->_otherlist = $c;
+        return = $a;
         
     }
 
@@ -100,53 +98,21 @@ class Events
         
     }
 
-    public function testas()
-    {
-        return $this->_otherlist;
-    }   
-
     public function showEvent($id)
     {
         $headerevent = "";
         $javascript = "";
         $userlist = "";
         
-        $sql = "SELECT e.EventNazwa as Nazwa, e.EventStart as Start, e.EventEnd as Koniec, u.UserName as User "
-              ."FROM Events e, Events_Rozdanie b, Rozdanie r, Users u "
-               ."WHERE e.ID_Event = " . $id
-              ." AND e.ID_Event = b.ID_Event AND b.ID_Rozdanie = r.ID_Rozdanie AND r.UserID = u.UserID";
+        $sql = <<<EOT
+        SELECT e.EventNazwa as Nazwa, e.EventStart as Start, e.EventEnd as Koniec, u.UserName as User 
+        FROM Events e, Events_Rozdanie b, Rozdanie r, Users u 
+        WHERE e.ID_Event = $id
+        AND e.ID_Event = b.ID_Event AND b.ID_Rozdanie = r.ID_Rozdanie AND r.UserID = u.UserID EOT;
+        
         //echo $sql;
 
-
-
-        
-        $result = $this->_db->query($sql);
-
-        // --- jakis sposob, zeby nie fetchowac po linijce? :/
-        
-        while ($row = $result->fetch_assoc()) {
-            $headerevent = "<div class='headevent' onclick='ukryj" . $id . "()'>"
-                          ."<p>"
-                          ."<span>" . $row['Nazwa'] . " |  </span>"
-                          ."<span>" . $row['Start'] . " | </span>"
-                          ."<span>" . $row['Koniec'] . "</span>"
-                          ."</p>"
-                          ."</div>";
-            $userlist .= "<p class='usersevent" . $id ."'>" . $row['User'] . "</p>";
-        }
-
-
-        $javascript = "<script>"
-                     ."function ukryj" . $id . "(){"
-                     ."var x = document.getElementsByClassName('usersevent".$id ."');"
-                     ."x[0].style.visibility = 'hidden';"
-                     ."}"
-                     ."</script>";
-        
-        return $headerevent . $userlist . $javascript;
-            
     }
-
-    
 }
+    
 ?>
