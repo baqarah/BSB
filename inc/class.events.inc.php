@@ -1,6 +1,4 @@
 <?php
-$pth = $_SERVER['DOCUMENT_ROOT'];
-
 class Events
 {
     private $_db;
@@ -113,7 +111,6 @@ class Events
         AND e.ID_Event = b.ID_Event AND b.ID_Rozdanie = r.ID_Rozdanie AND r.UserID = u.UserID
 EOT;
 
-        echo $sql;
         
         $result = $this->_db->query($sql);
         
@@ -125,7 +122,7 @@ EOT;
             $arrayuser[] = $row["User"];
         }
         
-        require $pth . "/inc/class.users.inc.showevent.php";
+        require $_SERVER['DOCUMENT_ROOT'] . "/inc/class.events.showevent.php";
 
     }
 }
