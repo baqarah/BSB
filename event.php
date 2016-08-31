@@ -6,7 +6,7 @@ include_once $pth . "/common/base.php";
 include_once $pth . "/common/header.php";
 include_once $pth . "/inc/class.events.inc.php";
 
-$events = new Events($db);
+$events = new Events($db, $_SESSION['Username']);
 
 
 echo "Partycypujesz w: ";
