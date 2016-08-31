@@ -114,13 +114,13 @@ class Events
         
         $result = $this->_db->query($sql);
         
-        //while ($row = $result->fetch_assoc()) {
-        $row = $result->fetch_assoc();
-        $nazwa = $row['Nazwa'];
-        $start = $row['Start'];
-        $koniec = $row['Koniec'];
-        $arrayuser[] = $row['User'];
-        //}
+        while ($row = $result->fetch_assoc()) {
+            //$row = $result->fetch_assoc();
+            $nazwa .= $row["Nazwa"];
+            $start .= $row["Start"];
+            $koniec .= $row["Koniec"];
+            $arrayuser[] = $row["User"];
+        }
         
         require $pth . "/inc/class.users.inc.showevent.php";
 

@@ -8,7 +8,14 @@
 
 <?php
 foreach ($arrayuser as $value) {
-    echo "<p class='uservent'>" .$value."</p>"; 
+    echo "<p class='usersevent'>" .$value."</p>"; 
 }
-
 ?>
+
+<script>
+ function ukryj() {
+     var x = document.getElementsByClassName("usersevent");
+     x[0].style.visibility = "hidden";
+ }
+</script>
+    
