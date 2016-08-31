@@ -107,6 +107,10 @@ class Events
 
     public function showEvent($id)
     {
+        $headerevent = "";
+        $javascript = "";
+        $userlist = "";
+        
         $sql = "SELECT e.EventNazwa as Nazwa, e.EventStart as Start, e.EventEnd as Koniec, u.UserName as User "
               ."FROM Events e, Events_Rozdanie b, Rozdanie r, Users u "
                ."WHERE e.ID_Event = " . $id
