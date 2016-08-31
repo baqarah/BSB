@@ -1,4 +1,5 @@
 <?php
+$pth = $_SERVER['DOCUMENT_ROOT'];
 
 class Events
 {
@@ -100,9 +101,10 @@ class Events
 
     public function showEvent($id)
     {
-        $headerevent = "";
-        $javascript = "";
-        $userlist = "";
+        $nazwa = "";
+        $start = "";
+        $koniec = "";
+        $arrayuser = array();
         
         $sql = <<<EOT
         SELECT e.EventNazwa as Nazwa, e.EventStart as Start, e.EventEnd as Koniec, u.UserName as User 
@@ -110,8 +112,16 @@ class Events
         WHERE e.ID_Event = $id
         AND e.ID_Event = b.ID_Event AND b.ID_Rozdanie = r.ID_Rozdanie AND r.UserID = u.UserID EOT;
 
+        $result = $this->_db->query($sql);
         
-        //echo $sql;
+        while ($row = $result->fetch_assoc()) {
+            $nazwa = $row['Nazwa'];
+            $start = $row['Start'];
+            $koniec = $row['Koniec'];
+            $arrayuser[] = $row['User'];
+        }
+        
+        require $pth . "/inc/class.users.inc.showevent.php";
 
     }
 }
