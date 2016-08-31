@@ -111,7 +111,6 @@ class Events
         FROM Events e, Events_Rozdanie b, Rozdanie r, Users u 
         WHERE e.ID_Event = $id
         AND e.ID_Event = b.ID_Event AND b.ID_Rozdanie = r.ID_Rozdanie AND r.UserID = u.UserID EOT;
-        
         $result = $this->_db->query($sql);
         
         while ($row = $result->fetch_assoc()) {
