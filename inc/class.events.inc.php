@@ -101,9 +101,9 @@ class Events
 
     public function showEvent($id)
     {
-        $nazwa = "";
-        $start = "";
-        $koniec = "";
+    //    $nazwa = "";
+    //    $start = "";
+    //    $koniec = "";
         $arrayuser = array();
         
         $sql = <<<EOT
