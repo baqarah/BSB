@@ -1,8 +1,6 @@
 <?php
 $pth = $_SERVER['DOCUMENT_ROOT'];
 
-bleble
-error_reporting(E_ALL);
 
 include_once $pth . "/common/base.php";
 include_once $pth . "/common/header.php";
