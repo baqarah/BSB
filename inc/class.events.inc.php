@@ -101,9 +101,9 @@ class Events
 
     public function showEvent($id)
     {
-    //    $nazwa = "";
-    //    $start = "";
-    //    $koniec = "";
+        $nazwa = "";
+        $start = "";
+        $koniec = "";
         $arrayuser = array();
         
         $sql = <<<EOT
@@ -111,15 +111,16 @@ class Events
         FROM Events e, Events_Rozdanie b, Rozdanie r, Users u 
         WHERE e.ID_Event = $id
         AND e.ID_Event = b.ID_Event AND b.ID_Rozdanie = r.ID_Rozdanie AND r.UserID = u.UserID EOT;
-
+        
         $result = $this->_db->query($sql);
         
-        while ($row = $result->fetch_assoc()) {
-            $nazwa = $row['Nazwa'];
-            $start = $row['Start'];
-            $koniec = $row['Koniec'];
-            $arrayuser[] = $row['User'];
-        }
+        //while ($row = $result->fetch_assoc()) {
+        $row = $result->fetch_assoc();
+        $nazwa = $row['Nazwa'];
+        $start = $row['Start'];
+        $koniec = $row['Koniec'];
+        $arrayuser[] = $row['User'];
+        //}
         
         require $pth . "/inc/class.users.inc.showevent.php";
 
