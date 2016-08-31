@@ -1,5 +1,6 @@
 <?php
 $pth = $_SERVER['DOCUMENT_ROOT'];
+error_reporting(E_ALL);
 include_once $pth . "/common/base.php";
 include_once $pth . "/common/header.php";
 include_once $pth . "/inc/class.events.inc.php";
