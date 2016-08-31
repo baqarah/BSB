@@ -10,18 +10,18 @@ $events = new Events($db);
 
 
 echo "Partycypujesz w: ";
-foreach ($events->_partlist as $value) {
-    echo $events->showEvent($value);
+foreach ($events->getPartList() as $value) {
+    $events->showEvent($value);
 }
 
 echo "Inne aktywne: ";
-foreach ($events->_activelist as $value) {
-    echo $events->showEvent($value);
+foreach ($events->getActiveList() as $value) {
+    $events->showEvent($value);
 }
 
 echo "Nieaktyne: ";
-foreach ($events->_otherlist as $value) {
-    echo $events->showEvent($value);
+foreach ($events->getOtherList() as $value) {
+    $events->showEvent($value);
 }
 
 

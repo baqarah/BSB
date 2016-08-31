@@ -24,7 +24,7 @@ class Events
         $this->_userid = $row['UserID'];
     }
 
-    public function getPartList();
+    public function getPartList()
     {
         $sql = "SELECT e.ID_Event as IDs "
               ."FROM Events e, Events_Rozdanie b, Rozdanie r "
