@@ -70,7 +70,7 @@ class Events
         while ($row = $result->fetch_assoc()) { 
             $a[]=$row['IDs'];
         }
-        return = $a;
+        return $a;
         
     }
 
