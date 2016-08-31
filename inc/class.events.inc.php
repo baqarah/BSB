@@ -101,9 +101,9 @@ class Events
 
     public function showEvent($id)
     {
-        $nazwa = "";
-        $start = "";
-        $koniec = "";
+//        $nazwa = "";
+//        $start = "";
+//        $koniec = "";
         $arrayuser = array();
         
         $sql = <<<EOT
@@ -116,9 +116,9 @@ class Events
         
         while ($row = $result->fetch_assoc()) {
             //$row = $result->fetch_assoc();
-            $nazwa .= $row["Nazwa"];
-            $start .= $row["Start"];
-            $koniec .= $row["Koniec"];
+            $nazwa = $row['Nazwa'];
+            $start = $row['Start'];
+            $koniec = $row['Koniec'];
             $arrayuser[] = $row["User"];
         }
         
