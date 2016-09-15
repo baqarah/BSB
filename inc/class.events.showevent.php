@@ -1,5 +1,5 @@
 <div class="wholeevent">
-    <div class="headevent"  onclick ="ukryj()" >
+    <div class="headevent"  onclick ="ukryj(this)" >
         <p>
             <span> <?php echo $nazwa; ?> | </span>
             <span> <?php echo $start; ?> | </span>
@@ -17,8 +17,8 @@ foreach ($arrayuser as $value) {
 </div>
 
 <script>
- function ukryj() {
-     var x = this.getElementsByClassName("usersevent");
+ function ukryj(obj) {
+     var x = obj.getElementsByClassName("usersevent");
      for(var i = 0; i < x.length; i++) {
          x[i].style.visibility = "hidden";
      }
