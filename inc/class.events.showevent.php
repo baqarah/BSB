@@ -18,7 +18,7 @@ foreach ($arrayuser as $value) {
 
 <script>
  function ukryj(obj) {
-     var x = obj.parent.getElementsByClassName("usersevent");
+     var x = obj.parentNode.getElementsByClassName("usersevent");
      for(var i = 0; i < x.length; i++) {
          if (x[i].style.display != "block") {
              x[i].style.display = "block";
