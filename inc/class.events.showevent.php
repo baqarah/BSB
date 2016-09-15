@@ -20,10 +20,10 @@ foreach ($arrayuser as $value) {
  function ukryj(obj) {
      var x = obj.getElementsByClassName("usersevent");
      for(var i = 0; i < x.length; i++) {
-         if (x[i].style.visibility != "hidden") {
-             x[i].style.visibility = "hidden";
+         if (x[i].style.display != "block") {
+             x[i].style.display = "block";
          } else {
-             x[i].style.visibility = "visible";
+             x[i].style.display = "none";
          }
      }
  }
