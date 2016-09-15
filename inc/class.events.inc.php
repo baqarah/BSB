@@ -119,9 +119,10 @@ EOT;
             $nazwa = $row['Nazwa'];
             $start = $row['Start'];
             $koniec = $row['Koniec'];
-            $arrayuser[] = $row["User"];
+            $arrayuser[] = $row['User'];
         }
-        
+
+        //---- Dodac sprawdzanie czy jest cos powyzszychj zmiennych
         require $_SERVER['DOCUMENT_ROOT'] . "/inc/class.events.showevent.php";
 
     }
