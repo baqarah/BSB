@@ -16,9 +16,9 @@ foreach ($arrayuser as $value) {
 
 <script>
  function ukryj() {
-     var x = document.getElementsByClassName("wholeevent").children;
-     for(var i = 0; i<x.length; i++) {
-         x[i].style.display = 'none';
+     var x = document.getElementsByClassName("usersevent");
+     for(var i = 0; i < x.length; i++) {
+         x[i].style.visibility = "hidden";
      }
  }
 </script>
