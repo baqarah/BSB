@@ -97,7 +97,7 @@ class Events
         
     }
 
-    public function showEvent($id)
+    public function showEvent($id, $mode="non-aktywne")
     {
         $nazwa = "";
         $start = "";

@@ -1,9 +1,11 @@
 <div class="wholeevent">
     <div class="headevent"  onclick ="ukryj(this)" >
         <p>
+
             <span> <?php echo $nazwa; ?> | </span>
             <span> <?php echo $start; ?> | </span>
             <span> <?php echo $koniec; ?> </span>
+            <?php if ($mode == "aktywne") { echo "<span>Dolacz</span>"}; ?>
         </p>
     </div>
     <div class="persons">

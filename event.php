@@ -9,23 +9,20 @@ include_once $pth . "/inc/class.events.inc.php";
 $events = new Events($db, $_SESSION['Username']);
 
 
-echo "Partycypujesz w: ";
+echo "<h2>Partycypujesz w: </h2>";
 foreach ($events->getPartList() as $value) {
     $events->showEvent($value);
 }
 
-echo "Inne aktywne: ";
+echo "<h2>Inne aktywne: </h2>";
 foreach ($events->getActiveList() as $value) {
-    $events->showEvent($value);
+    $events->showEvent($value, "aktywne");
 }
 
-echo "Nieaktyne: ";
+echo "<h2>Nieaktyne: </h2>";
 foreach ($events->getOtherList() as $value) {
     $events->showEvent($value);
 }
-
-
-
 
 // $events->showEvent(4);
 echo '<a href="/event_add.php">DODAJ EVENT</a>';
