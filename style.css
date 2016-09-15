@@ -137,3 +137,9 @@ input {
     border: .1em solid white;
     background-color: #cccccc;
 }
+
+.usersevent {
+    background-color: white;
+    border: .01 solid grey;
+    display: none;
+}
