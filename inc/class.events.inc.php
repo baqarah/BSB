@@ -40,9 +40,9 @@ class Events
 
     public function getActiveList()
     {
-        $sql = "SELECT e.ID_Event as IDs "
+        $sql = "SELECT e.ID_Event as IDs, e.Aktywny, r.UserID "
               ."FROM Events e, Rozdanie r "
-              ."WHERE e.ID_Event = r.ID_Rozdanie "
+              ."WHERE e.ID_Event = r.ID_Event "
               ."AND e.Aktywny = 1 AND r.UserID <>" . $this->_userid;
         //echo $sql;
         $a = array();
