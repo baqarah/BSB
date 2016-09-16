@@ -28,7 +28,7 @@ class Events
               ."FROM Rozdanie as r "
               ."LEFT JOIN (SELECT ID_Event, 1 as test FROM Rozdanie WHERE UserID = " . $this->_userid . ") as s "
               ."ON r.ID_Event = s.ID_Event "
-              ."WHERE test IS NULL"
+              ."WHERE test IS NULL";
 
         $a = array();
         
