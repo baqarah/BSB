@@ -25,9 +25,8 @@ class Events
     public function getPartList()
     {
         $sql = "SELECT e.ID_Event as IDs "
-              ."FROM Events e, Events_Rozdanie b, Rozdanie r "
-              ."WHERE e.ID_Event = b.ID_Event "
-              ."AND b.ID_Rozdanie = r.ID_Rozdanie "
+              ."FROM Events e, Rozdanie r "
+              ."WHERE e.ID_Event = r.ID_Event "
               ."AND e.Aktywny = 1 AND r.UserID =" . $this->_userid;
 
         $a = array();
@@ -42,9 +41,8 @@ class Events
     public function getActiveList()
     {
         $sql = "SELECT e.ID_Event as IDs "
-              ."FROM Events e, Events_Rozdanie b, Rozdanie r "
-              ."WHERE e.ID_Event = b.ID_Event "
-              ."AND b.ID_Rozdanie = r.ID_Rozdanie "
+              ."FROM Events e, Rozdanie r "
+              ."WHERE e.ID_Event = r.ID_Rozdanie "
               ."AND e.Aktywny = 1 AND r.UserID <>" . $this->_userid;
         //echo $sql;
         $a = array();
@@ -61,6 +59,7 @@ class Events
         $sql = "SELECT e.ID_Event as IDs "
               ."FROM Events e "
               ."WHERE e.Aktywny = 0";
+        // tutaj trzeba bedzie dodac czasowe ograniczenie
         
         $a = array();
         
@@ -106,9 +105,9 @@ class Events
         
         $sql = <<<EOT
         SELECT e.EventNazwa as Nazwa, e.EventStart as Start, e.EventEnd as Koniec, u.UserName as User 
-        FROM Events e, Events_Rozdanie b, Rozdanie r, Users u 
+        FROM Events e, Rozdanie r, Users u 
         WHERE e.ID_Event = $id
-        AND e.ID_Event = b.ID_Event AND b.ID_Rozdanie = r.ID_Rozdanie AND r.UserID = u.UserID
+        AND e.ID_Event = r.ID_Event AND r.UserID = u.UserID
 EOT;
 
         
