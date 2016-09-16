@@ -135,7 +135,7 @@ EOT;
         $result = $this->_db->query($sql);
         $last_id = $this->_db->insert_id;
        
-        return $id;
+        return $last_id;
     }
 }
     
