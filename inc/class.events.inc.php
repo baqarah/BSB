@@ -45,7 +45,7 @@ class Events
               ."LEFT JOIN (SELECT ID_Event, 1 as test FROM Rozdanie WHERE UserID = " . $this->_userid . ") as s "
               ."ON r.ID_Event = s.ID_Event "
               ."WHERE test IS NULL";
-        //echo $sql;
+        //trzba dodac wyrzucanie nieaktywnych !!!;
         $a = array();
         
         $result = $this->_db->query($sql);
