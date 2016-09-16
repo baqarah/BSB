@@ -133,8 +133,8 @@ EOT;
         $sql = "INSERT INTO 'Rozdanie' ('UserID') VALUES (" . $this->_userid . ")";
         //echo $sql;
         $result = $this->_db->query($sql);
-        $last_id = $result->insert_id;
-        
+        $last_id = $this->_db->insert_id;
+       
         return $id;
     }
 }
