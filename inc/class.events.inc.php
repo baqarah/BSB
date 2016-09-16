@@ -24,10 +24,11 @@ class Events
 
     public function getPartList()
     {
-        $sql = "SELECT e.ID_Event as IDs "
-              ."FROM Events e, Rozdanie r "
-              ."WHERE e.ID_Event = r.ID_Event "
-              ."AND e.Aktywny = 1 AND r.UserID =" . $this->_userid;
+        $sql = "SELECT r.ID_Event as IDs "
+              ."FROM Rozdanie as r "
+              ."LEFT JOIN (SELECT ID_Event, 1 as test FROM Rozdanie WHERE UserID = " . $this->_userid . ") as s "
+              ."ON r.ID_Event = s.ID_Event "
+              ."WHERE test IS NULL"
 
         $a = array();
         
