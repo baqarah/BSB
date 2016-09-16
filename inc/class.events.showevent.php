@@ -16,7 +16,13 @@ foreach ($arrayuser as $value) {
 ?>
     </div>
     <?php if ($mode == "aktywne") { ?>
-        <div class='eventjoin'><h3>Dolacz</span></h3>
+        <div class='eventjoin'>
+            <form action="event.php" method="POST" name="eventjoin"  id="eventjoin">
+                <div class="formularz">
+                    <input type="submit" name="joinevent" id="joinevent" value="Join" />
+                </div>
+            </form>
+        </div>
     <?php } ?>
 
 </div>
