@@ -136,7 +136,8 @@ EOT;
         $last_id = $this->_db->insert_id;
 
         $sql = "INSERT INTO Events_Rozdanie(ID_Event, ID_Rozdanie) VALUES (" . $id . ", " . $last_id . ")";
-
+        $result = $this->_db->query($sql);
+        
         echo $sql;
         
         return $last_id;
