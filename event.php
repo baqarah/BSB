@@ -8,6 +8,11 @@ include_once $pth . "/inc/class.events.inc.php";
 
 $events = new Events($db, $_SESSION['Username']);
 
+if (!empty($_POST['eventjoinid'])) {
+    echo "<h>";
+    echo $events->joinEvent($_POST['eventjoinid']);
+    echo "</h>";
+}
 
 echo "<h2>Partycypujesz w: </h2>";
 foreach ($events->getPartList() as $value) {

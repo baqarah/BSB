@@ -129,7 +129,7 @@ EOT;
 
     public function joinEvent($id)
     {
-        return true;
+        return $id;
     }
 }
     
