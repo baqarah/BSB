@@ -131,10 +131,14 @@ EOT;
     {
 
         $sql = "INSERT INTO Rozdanie(UserID) VALUES (" . $this->_userid . ")";
-        echo $sql;
+       
         $result = $this->_db->query($sql);
         $last_id = $this->_db->insert_id;
-       
+
+        $sql = "INSERT INTO Events_Rozdanie(ID_Event, ID_Rozdanie) VALUES (" . $id . ", " . $last_id . ")";
+
+        echo $sql;
+        
         return $last_id;
     }
 }
