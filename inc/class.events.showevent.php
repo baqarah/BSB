@@ -19,7 +19,7 @@ foreach ($arrayuser as $value) {
         <div class='eventjoin'>
             <form action="event.php" method="POST" name="eventjoin"  id="eventjoin">
                 <div class="formularz">
-                    <input type="hidden" name="eventjoinid" value="<?php $id; ?>"
+                    <input type="hidden" name="eventjoinid" value="<?php echo $id; ?>"
                     <input type="submit" name="joinevent" id="joinevent" value="Join" />
                 </div>
             </form>
