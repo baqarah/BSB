@@ -5,7 +5,6 @@
             <span> <?php echo $nazwa; ?> | </span>
             <span> <?php echo $start; ?> | </span>
             <span> <?php echo $koniec; ?> </span>
-            <?php if ($mode == "aktywne") { echo "<span>Dolacz</span>";} ?>
         </p>
     </div>
     <div class="persons">
@@ -16,6 +15,10 @@ foreach ($arrayuser as $value) {
 }
 ?>
     </div>
+    <?php if ($mode == "aktywne") { ?>
+        <div class='eventjoin'><h3>Dolacz</span></h3>
+    <?php } ?>
+
 </div>
 
 <script>

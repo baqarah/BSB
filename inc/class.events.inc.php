@@ -126,6 +126,11 @@ EOT;
         require $_SERVER['DOCUMENT_ROOT'] . "/inc/class.events.showevent.php";
 
     }
+
+    public function joinEvent($id)
+    {
+        return true;
+    }
 }
     
 ?>
