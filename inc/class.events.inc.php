@@ -57,7 +57,7 @@ class Events
 
     public function getOtherList()
     {
-        $sql = "SELECT DISCTINCT e.ID_Event as IDs "
+        $sql = "SELECT DISTINCT e.ID_Event as IDs "
               ."FROM Events e "
               ."WHERE e.Aktywny = 0";
         // tutaj trzeba bedzie dodac czasowe ograniczenie Aktwyny jest bez sensu
