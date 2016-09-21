@@ -129,7 +129,7 @@ EOT;
     public function joinEvent($id)
     {
 
-        $sql = "INSERT INTO Rozdanie(ID_Event, UserID) VALUES ( . $id . "," . $this->_userid . )";
+        $sql = "INSERT INTO Rozdanie(ID_Event, UserID) VALUES (" . $id . "," . $this->_userid . )";
        
         $result = $this->_db->query($sql);
         $last_id = $this->_db->insert_id;
