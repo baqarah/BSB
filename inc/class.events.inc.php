@@ -139,8 +139,19 @@ EOT;
         //$result = $this->_db->query($sql);
         
         echo $sql;
+
+        //losowanie rozdania bedzie tutaj!
         
         return $last_id;
+    }
+
+    public function leaveEvent($id)
+    {
+        $sql = "DELETE FROM Rozdanie WHERE ID_Event =" . $id . "AND UserID =" . $this->_userid;
+        $result = $this->_db->query($sql);
+
+        return "Done";
+        
     }
 }
     

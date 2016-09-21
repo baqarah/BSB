@@ -24,7 +24,19 @@
                 </div>
             </form>
         </div>
+    <?php }
+
+    if ($mode == "part") { ?>
+        <div class="eventleave">
+            <form action="event.php" method="POST" name="eventleave"  id="eventleave">
+                <div class="formularz">
+                    <input type="hidden" name="eventleaveid" value="<?php echo $id; ?>" />
+                    <input type="submit" name="eventleave" id="eventleave" value="Leave" />
+                </div>
+            </form>
+        </div>
     <?php } ?>
+
     
 </div>
 
