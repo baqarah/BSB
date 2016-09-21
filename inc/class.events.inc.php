@@ -60,7 +60,7 @@ class Events
         $sql = "SELECT e.ID_Event as IDs "
               ."FROM Events e "
               ."WHERE e.Aktywny = 0";
-        // tutaj trzeba bedzie dodac czasowe ograniczenie, Aktwyny jest bez sensu
+        // tutaj trzeba bedzie dodac czasowe ograniczenie Aktwyny jest bez sensu
         
         $a = array();
         
@@ -129,13 +129,14 @@ EOT;
     public function joinEvent($id)
     {
 
-        $sql = "INSERT INTO Rozdanie(UserID) VALUES (" . $this->_userid . ")";
+        $sql = "INSERT INTO Rozdanie(ID_Event, UserID) VALUES ( . $id . "," . $this->_userid . )";
        
         $result = $this->_db->query($sql);
         $last_id = $this->_db->insert_id;
 
-        $sql = "INSERT INTO Events_Rozdanie(ID_Event, ID_Rozdanie) VALUES (" . $id . ", " . $last_id . ")";
-        $result = $this->_db->query($sql);
+        //historyczny kod przed zmiana bazy danych:
+        //$sql = "INSERT INTO Events_Rozdanie(ID_Event, ID_Rozdanie) VALUES (" . $id . ", " . $last_id . ")";
+        //$result = $this->_db->query($sql);
         
         echo $sql;
         
