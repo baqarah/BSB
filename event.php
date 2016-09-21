@@ -21,7 +21,7 @@ foreach ($events->getPartList() as $value) {
 
 echo "<h2>Inne aktywne: </h2>";
 foreach ($events->getActiveList() as $value) {
-    $events->showEvent($value); //, "aktywne");
+    $events->showEvent($value, "aktywne");
 }
 
 echo "<h2>Nieaktyne: </h2>";
