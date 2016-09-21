@@ -18,7 +18,7 @@ if (!empty($_POST['eventleaveid'])) {
     echo "<h>";
     echo $events->leaveEvent($_POST['eventleaveid']);
     echo "</h>";
-}
+}x
 
 
 echo "<h2>Partycypujesz w: </h2>";
