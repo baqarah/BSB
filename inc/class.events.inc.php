@@ -45,7 +45,7 @@ class Events
               ."LEFT JOIN (SELECT ID_Event, 1 as test FROM Rozdanie WHERE UserID = " . $this->_userid . ") as s "
               ."ON r.ID_Event = s.ID_Event "
               ."WHERE test IS NULL AND e.ID_Event = r.ID_Event AND e.Aktywny = 1";
-        //trzba dodac wyrzucanie nieaktywnych !!!;
+        
         $a = array();
         
         $result = $this->_db->query($sql);
@@ -60,7 +60,7 @@ class Events
         $sql = "SELECT e.ID_Event as IDs "
               ."FROM Events e "
               ."WHERE e.Aktywny = 0";
-        // tutaj trzeba bedzie dodac czasowe ograniczenie
+        // tutaj trzeba bedzie dodac czasowe ograniczenie, Aktwyny jest bez sensu
         
         $a = array();
         
@@ -115,7 +115,6 @@ EOT;
         $result = $this->_db->query($sql);
         
         while ($row = $result->fetch_assoc()) {
-            //$row = $result->fetch_assoc();
             $nazwa = $row['Nazwa'];
             $start = $row['Start'];
             $koniec = $row['Koniec'];
