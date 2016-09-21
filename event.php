@@ -14,6 +14,13 @@ if (!empty($_POST['eventjoinid'])) {
     echo "</h>";
 }
 
+if (!empty($_POST['eventleaveid'])) {
+    echo "<h>";
+    echo $events->leaveEvent($_POST['eventleaveid']);
+    echo "</h>";
+}
+
+
 echo "<h2>Partycypujesz w: </h2>";
 foreach ($events->getPartList() as $value) {
     $events->showEvent($value, "part");
