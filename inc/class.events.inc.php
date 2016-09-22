@@ -128,9 +128,8 @@ EOT;
 
     public function joinEvent($id)
     {
-
         $sql = "INSERT INTO Rozdanie(ID_Event, UserID) VALUES (" . $id . "," . $this->_userid . ")";
-       
+        
         $result = $this->_db->query($sql);
         $last_id = $this->_db->insert_id;
 
@@ -139,20 +138,61 @@ EOT;
         //$result = $this->_db->query($sql);
         
         echo $sql;
-
+        
         //losowanie rozdania bedzie tutaj!
         
         return $last_id;
     }
-
+    
     public function leaveEvent($id)
     {
         $sql = "DELETE FROM Rozdanie WHERE ID_Event = " . $id . " AND UserID = " . $this->_userid;
         $result = $this->_db->query($sql);
-
-        echo $sql;
-        return "Event number " . $id . " left";
         
+        echo $sql;
+        return "Event number " . $id . " left";       
+    }
+
+    public function rngRozdanie($id_rozdanie)
+    {
+        $sql = "SELECT ID_BS  FROM BSB.BShits";
+        $result = $this->_db->query($sql);
+        
+        while($row = $result->fetch_assoc()) {
+            $rows[] = $row['ID_BS'];
+        }
+        
+        $rngArray = array();
+        
+        $lines = count($rows);
+        $i = 0;
+        $temp_to_splice = $rows;
+        
+        while ($i < 25) {
+            if ($i != 12) { 
+	        $rand_line = rand(0, $lines - 1);
+	        $rngArray[$i] =  $temp_to_splice[$rand_line];
+	        array_splice($temp_to_splice, $rand_line, 1); 
+	        $lines--;
+            } else {
+	        $rngArray[$i] = "X";
+            }
+            $i++;
+        }   
+        
+        for ($y = 0; $y <= 24; y++) {
+            
+            if ($y == 12) {
+                $hit = 1
+            } else {
+                $hit = 0
+            }
+            
+            $sql = "INSERT INTO LinieRozdan(" . 
+                  ."ID_Rozdanie, PoleRozdania, ID_BS, CzyTrafione) "
+                  ."VALUES(" . $id_rozdanie . ", " , $y + 1 . ", " . $rngArray[$y] . ", " . $hit . ")"; 
+            echo $sql;
+        }
     }
 }
     
