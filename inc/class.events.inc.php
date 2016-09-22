@@ -146,9 +146,16 @@ EOT;
     
     public function leaveEvent($id)
     {
-        $sql = "DELETE FROM Rozdanie WHERE ID_Event = " . $id . " AND UserID = " . $this->_userid;
-        $result = $this->_db->query($sql);
+        $sql = "SELECT ID_Rozdanie FROM Rozdanie WHERE ID_Event = " . $id . " AND UserID = " . $this->_userid;
+        $result = $this->_db->quer($sql);
+        $row = $result->fetch_assoc();
+        $id_rozdanie  = $row['ID_Rozdanie'];
+
         
+        $sql = "DELETE FROM Rozdanie WHERE ID_Event = " . $id . " AND UserID = " . $this->_userid;
+        $this->_db->query($sql);
+        $sql = "DELETE FROM LinieRozdan WHERE ID_Rozdanie = " . $id_rozdanie;
+        $this->_db->query($sql);
         echo $sql;
         return "Event number " . $id . " left";       
     }
