@@ -183,9 +183,9 @@ EOT;
         for ($y = 0; $y <= 24; $y++) {
             
             if ($y == 12) {
-                $hit = 1
+                $hit = 1;
             } else {
-                $hit = 0
+                $hit = 0;
             }
             
             $sql = "INSERT INTO LinieRozdan(" . 
