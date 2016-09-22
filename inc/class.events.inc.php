@@ -179,7 +179,7 @@ EOT;
             }
             $i++;
         }   
-        $tempstring = "";
+        $tempstring = "tutaj jest kod sql'a \n";
         
         for ($y = 0; $y <= 24; $y++) {
             
@@ -192,7 +192,7 @@ EOT;
             
             $sql = "INSERT INTO LinieRozdan(ID_Rozdanie, PoleRozdania, ID_BS, CzyTrafione) VALUES("
                   . $id_rozdanie . ", " . $z . ", " . $rngArray[$y] . ", " . $hit . ")"; 
-
+            echo $sql;
             $tempstring .= $sql & "\n";
         }
 
