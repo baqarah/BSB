@@ -190,7 +190,7 @@ EOT;
             
             $sql = "INSERT INTO LinieRozdan("  
                   ."ID_Rozdanie, PoleRozdania, ID_BS, CzyTrafione) "
-                  ."VALUES(" . $id_rozdanie . ", " , $y + 1 . ", " . $rngArray[$y] . ", " . $hit . ")"; 
+                  ."VALUES(" . $id_rozdanie . ", " . $y + 1 . ", " . $rngArray[$y] . ", " . $hit . ")"; 
             echo $sql;
         }
     }
