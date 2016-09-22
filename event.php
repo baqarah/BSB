@@ -39,7 +39,7 @@ foreach ($events->getOtherList() as $value) {
 
 // $events->showEvent(4);
 
-$events->rngRozdanie(12);
+//$events->rngRozdanie(12);
 
 echo '<a href="/event_add.php">DODAJ EVENT</a>';
 
