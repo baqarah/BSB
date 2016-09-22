@@ -187,12 +187,14 @@ EOT;
             } else {
                 $hit = 0;
             }
-            $z = $y + 1;
+            $z = $y + 1;XS
             
             $sql = "INSERT INTO LinieRozdan(ID_Rozdanie, PoleRozdania, ID_BS, CzyTrafione) VALUES("
                   . $id_rozdanie . ", " . $z . ", " . $rngArray[$y] . ", " . $hit . ")"; 
-            echo $sql & "\n";
+            $tempstring .= $sql & "\n";
         }
+
+        return $tempstring;
     }
 }
     
