@@ -147,7 +147,7 @@ EOT;
     public function leaveEvent($id)
     {
         $sql = "SELECT ID_Rozdanie FROM Rozdanie WHERE ID_Event = " . $id . " AND UserID = " . $this->_userid;
-        $result = $this->_db->quer($sql);
+        $result = $this->_db->query($sql);
         $row = $result->fetch_assoc();
         $id_rozdanie  = $row['ID_Rozdanie'];
 
