@@ -197,7 +197,7 @@ EOT;
             echo $sql . "\n";
         }
 
-        return $tempstring;
+        //return $tempstring;
     }
 }
     
