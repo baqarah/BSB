@@ -164,9 +164,10 @@ EOT;
         
         $rngArray = array();
         
-        $lines = count($rows);
         $i = 0;
         $temp_to_splice = $rows;
+        array_splice($temp_to_splice, 0, 1);
+        $lines = count($temp_to_splice);
         
         while ($i < 25) {
             if ($i != 12) { 
@@ -175,7 +176,7 @@ EOT;
 	        array_splice($temp_to_splice, $rand_line, 1); 
 	        $lines--;
             } else {
-	        $rngArray[$i] = "X";
+	        $rngArray[$i] = 1;
             }
             $i++;
         }   
