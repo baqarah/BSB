@@ -22,7 +22,8 @@ $rozdanie->showRozdanie();
  function eskuel() {
      var xhttp;
      document.getElementById("text").innerHTML = "kurwa, dzialaj";
-
+</script>
+<!-- 
      if (window.XMLHttpRequest) {
          xhttp = new XMLHttpRequest();
      } else {
@@ -39,4 +40,6 @@ $rozdanie->showRozdanie();
      xhttp.send();
 
  }
+
 </script>
+-->
