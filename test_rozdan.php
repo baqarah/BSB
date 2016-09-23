@@ -26,8 +26,13 @@ $rozdanie->showRozdanie();
      } else {
          xhttp = new ActiveXObject("Microsoft.XMLHTTP");
      }
-     document.getElementById("text").innerHTML = "eloszka"
-     document.getElementById("text").innerHTML = this.responseText;
+
+     xhttp.onreadystatechange = function() {
+         if (this.readyState == 4 && this.status == 200) {
+             document.getElementById("text").innerHTML = this.responseText;
+         }
+     };
+
      xhttp.open("GET", "test_ajax.php", true);
      xhttp.send();
 
