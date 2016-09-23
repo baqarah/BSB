@@ -1,4 +1,4 @@
 <?php
 
-"ajax dziala";
+echo "ajax dziala";
 ?>
