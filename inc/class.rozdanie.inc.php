@@ -22,7 +22,7 @@ class Rozdanie
               ."FROM BSB.LinieRozdan as r JOIN BSB.BShits as s ON r.ID_BS = s.ID_BS WHERE r.ID_Rozdanie = " . $id_rozdanie;
         $rozdanie_info = $this->_db->query($sql);
         
-        while ($row = $this->$rozdanie_info->fetch_assoc()) {
+        while ($row = $rozdanie_info->fetch_assoc()) {
             $this->_txts[] = $row['txt'];
             $this->_idtxts[] = $row['id'];
             $this->_hits[] = $row['hit'];
