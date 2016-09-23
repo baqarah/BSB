@@ -28,7 +28,7 @@ $rozdanie->showRozdanie();
          xhttp = new ActiveXObject("Microsoft.XMLHTTP");
      }
      xhttp.open("GET", "test_ajax.php", true);
-
+     xhttp.send();
 
  }
 </script>
