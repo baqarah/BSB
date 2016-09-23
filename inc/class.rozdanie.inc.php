@@ -48,7 +48,7 @@ class Rozdanie
 
     public function showRozdanie()
     {
-        $html = <<< 'EOD'
+        $html = <<<EOD
         hello
         EOD;
 
