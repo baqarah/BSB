@@ -1,5 +1,5 @@
 <?php
-/*
+
 echo "<h> Test rozdan<h>";
 $pth = $_SERVER['DOCUMENT_ROOT'];
 
@@ -15,7 +15,7 @@ $rozdanie = new Rozdanie($db, 42);
 //echo "<br>";
 $rozdanie->showRozdanie();
 
-*/
+
 ?>
 
 <button type="button" onclick="funsql();" >klikmnie</button>
