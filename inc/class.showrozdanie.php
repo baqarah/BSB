@@ -11,9 +11,11 @@ $h = $this->getHits();
         
         
         for ($y = 0; $y <= 4; $y++) {
-            $komorka = "<td>eloszka</td>\n";
-
+            $wynik = ($i * 5) + $y
+            $komorka = "<td>eloszka" . $wynik . "</td>\n";
+            
             echo $komorka;
+            
         }
         
         echo "</tr>\n";
