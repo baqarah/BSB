@@ -16,14 +16,11 @@ $rozdanie->showRozdanie();
 
 
 ?>
-<button type="button" onlick="funsql()" >klikmnie</button>
+<button type="button" onlick="funsql();" >klikmnie</button>
 <p><span id="text" >UMCUMSCUMSC</span></p>
 <script>
  function funsql() {
-     document.getElementById("text").innerHTML = "kurwa, dzialaj";
- }
-</script>
-<!-- 
+
      var xhttp;
      if (window.XMLHttpRequest) {
          xhttp = new XMLHttpRequest();
@@ -43,4 +40,4 @@ $rozdanie->showRozdanie();
  }
 
 </script>
--->
+
