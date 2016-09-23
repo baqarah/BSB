@@ -50,7 +50,8 @@ class Rozdanie
     {
         $html = <<<EOT
         hello
-        EOT;
+wtf?
+EOT;
 
         return $html;
     }
