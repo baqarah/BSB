@@ -48,15 +48,11 @@ class Rozdanie
 
     public function showRozdanie()
     {
-        $html = <<<EOD
+        $html = <<<EOT
         hello
-        EOD;
+        EOT;
 
         return $html;
     }
-
-    
-
-    
 }
 ?>
