@@ -13,6 +13,8 @@ $h = $this->getHits();
             $komorka = "<td>"
             . $i * 5 + $y 
             ."</td>";
+
+            echo $komorka;
         }
         
         echo "</tr>";
