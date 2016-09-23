@@ -3,7 +3,7 @@
 <p><span id="text" >UMCUMSCUMSC</span></p>
 <script>
  function funkcjaKURWA() {
-     alert("kurwa");
+     document.getElementById("text").innerHTML = "kurwa";
 }
 
 </script>
