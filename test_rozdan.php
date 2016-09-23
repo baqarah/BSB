@@ -22,8 +22,9 @@ $rozdanie->showRozdanie();
 <p><span id="text" >UMCUMSCUMSC</span></p>
 <script>
  function funsql() {
-
      var xhttp;
+     alert("kurwa");
+     
      if (window.XMLHttpRequest) {
          xhttp = new XMLHttpRequest();
          alert("chrome");
