@@ -54,11 +54,7 @@ class Rozdanie
 
     public function showRozdanie()
     {
-        $html = <<<EOT
-        test
-EOT;
-
-        return $html;
+        require $_SERVER['DOCUMENT_ROOT'] . "/inc/class.showrozdanie.php";
     }
 }
 ?>
