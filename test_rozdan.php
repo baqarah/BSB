@@ -23,14 +23,11 @@ $rozdanie->showRozdanie();
 <script>
  function funsql() {
      var xhttp;
-     alert("kurwa");
-     
+         
      if (window.XMLHttpRequest) {
          xhttp = new XMLHttpRequest();
-         alert("chrome");
      } else {
          xhttp = new ActiveXObject("Microsoft.XMLHTTP");
-         alert("windoza");
      }
      
      xhttp.onreadystatechange = function() {
@@ -39,8 +36,8 @@ $rozdanie->showRozdanie();
          }
      };
 
-     document.getElementById("text").innerHTML = "elo";
-     xhttp.open("GET", "http://www.w3schools.com/ajax/ajax_info.txt", true);
+     document.getElementById("text").innerHTML = "tutaj ma wyladowac";
+     xhttp.open("GET", "test_ajax.php", true);
      xhttp.send();
  
  }
