@@ -4,9 +4,9 @@ class Rozdanie
 
     private $_db;
     //private $_rozdanie_info;
-    private $_txts;
-    private $_idtxts;
-    private $_hits;
+    private $_txts = array();
+    private $_idtxts = array();
+    private $_hits = array();
     
     
     public function __construct($db = NULL, $id_rozdanie)
