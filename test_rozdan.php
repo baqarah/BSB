@@ -18,7 +18,7 @@ $rozdanie->showRozdanie();
 */
 ?>
 
-<button type="button" onlick="funsql();" >klikmnie</button>
+<button type="button" onclick="funsql();" >klikmnie</button>
 <p><span id="text" >UMCUMSCUMSC</span></p>
 <script>
  function funsql() {
