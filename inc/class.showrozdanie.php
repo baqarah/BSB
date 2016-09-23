@@ -1,7 +1,28 @@
-<?php $a = $this->getTxts() ?>
+<?php
+$a = $this->getTxts();
+$h = $this->getHits();
+?>
 
 <table id="MyTable">
-<tr>
+
+    <?php 
+    for ($i = 0; $i <= 4; $i++) {
+        echo "<tr>";
+
+        for ($y = 0; $y <= 4; $y++) {
+            $komorka = "<td>"
+            . $i * 5 + $y 
+            ."</td>";
+        }
+        
+        echo "</tr>";
+    }
+    ?>
+
+</table>    
+
+<!--
+ <tr>
     <td><?php echo $a[0] ?></td>
     <td><?php echo $a[1] ?></td>
     <td><?php echo $a[2] ?></td>
@@ -37,4 +58,4 @@
     <td><?php echo $a[24] ?></td>
 </tr>
 </table>
-
+-->
