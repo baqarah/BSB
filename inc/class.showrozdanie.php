@@ -11,7 +11,7 @@ $h = $this->getHits();
         
         
         for ($y = 0; $y <= 4; $y++) {
-            $komorka = "<td>eloszka</td>";// . $i * 5 + $y ."</td>\n";
+            $komorka = "<td>eloszka" . $i * 5 + $y ."</td>\n";
 
             echo $komorka;
         }
