@@ -38,7 +38,7 @@ $rozdanie->showRozdanie();
 
      xhttp.open("GET", "test_ajax.php", true);
      xhttp.send();
-
+ 
  }
 
 </script>
