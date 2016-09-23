@@ -1,8 +1,8 @@
 
-<button type="button" onlick="funsql();" >klikmnie</button>
+<button type="button" onlick="funkcjaKURWA();" >klikmnie</button>
 <p><span id="text" >UMCUMSCUMSC</span></p>
 <script>
- function funsql() {
+ function funkcjaKURWA() {
      alert("kurwa");
 }
 
