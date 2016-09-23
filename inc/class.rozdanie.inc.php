@@ -16,12 +16,12 @@ class Rozdanie
         } else {
             $this->_db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         }        
-        
+
         $this->refreshData();
             
     }
 
-    public refreshData()
+    public function refreshData()
     {
         $sql = "SELECT r.PoleRozdania pole, r.ID_BS id, r.CzyTrafione hit, s.BSText txt " 
               ."FROM BSB.LinieRozdan as r JOIN BSB.BShits as s ON r.ID_BS = s.ID_BS WHERE r.ID_Rozdanie = " . $id_rozdanie
