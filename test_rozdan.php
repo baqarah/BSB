@@ -21,6 +21,8 @@ $rozdanie->showRozdanie();
 <script>
  function eskuel() {
      var xhttp;
+     document.getElementById("text").innerHTML = "kurwa, dzialaj";
+
      if (window.XMLHttpRequest) {
          xhttp = new XMLHttpRequest();
      } else {
