@@ -1,21 +1,22 @@
-/*<?php
-  echo "<h> Test rozdan<h>";
-  $pth = $_SERVER['DOCUMENT_ROOT'];
-  
-  
-  include_once $pth . "/common/base.php";
-  include_once $pth . "/common/header.php";
-  include_once $pth . "/inc/class.rozdanie.inc.php";
-  
-  $rozdanie = new Rozdanie($db, 42);
-  //print_r($rozdanie->getHits());
-  //print_r($rozdanie->getTxts());
-  //print_r($rozdanie->getIDTxts());
-  //echo "<br>";
-  $rozdanie->showRozdanie();
+<?php
+/*
+echo "<h> Test rozdan<h>";
+$pth = $_SERVER['DOCUMENT_ROOT'];
 
-  
-  ?> */
+
+include_once $pth . "/common/base.php";
+include_once $pth . "/common/header.php";
+include_once $pth . "/inc/class.rozdanie.inc.php";
+
+$rozdanie = new Rozdanie($db, 42);
+//print_r($rozdanie->getHits());
+//print_r($rozdanie->getTxts());
+//print_r($rozdanie->getIDTxts());
+//echo "<br>";
+$rozdanie->showRozdanie();
+
+*/
+?>
 
 <button type="button" onlick="funsql();" >klikmnie</button>
 <p><span id="text" >UMCUMSCUMSC</span></p>
@@ -37,6 +38,7 @@
          }
      };
 
+     document.getElementById("text").innerHTML = "elo";
      xhttp.open("GET", "test_ajax.txt", true);
      xhttp.send();
  
