@@ -3,6 +3,7 @@ class Rozdanie
 {
 
     private $_db;
+    private $_sqlrefresh;
     //private $_rozdanie_info;
     private $_txts = array();
     private $_idtxts = array();
@@ -16,17 +17,18 @@ class Rozdanie
         } else {
             $this->_db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         }        
-
+        
+        $this->_sqlrefresh = "SELECT r.PoleRozdania pole, r.ID_BS id, r.CzyTrafione hit, s.BSText txt " 
+                            ."FROM BSB.LinieRozdan as r JOIN BSB.BShits as s ON r.ID_BS = s.ID_BS WHERE r.ID_Rozdanie = " . $id_rozdanie
+                            ." ORDER BY pole ASC";
+        
         $this->refreshData();
             
     }
 
     public function refreshData()
     {
-        $sql = "SELECT r.PoleRozdania pole, r.ID_BS id, r.CzyTrafione hit, s.BSText txt " 
-              ."FROM BSB.LinieRozdan as r JOIN BSB.BShits as s ON r.ID_BS = s.ID_BS WHERE r.ID_Rozdanie = " . $id_rozdanie
-              ." ORDER BY pole ASC";
-        $rozdanie_info = $this->_db->query($sql);
+        $rozdanie_info = $this->_db->query($this->_sqlrefresh);
         
         while ($row = $rozdanie_info->fetch_assoc()) {
             $this->_txts[] = $row['txt'];
