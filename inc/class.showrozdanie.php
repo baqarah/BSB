@@ -12,7 +12,7 @@ $h = $this->getHits();
         
         for ($y = 0; $y <= 4; $y++) {
             $wynik = ($i * 5) + $y
-            $komorka = "<td>eloszka" . $wynik . "</td>\n";
+            $komorka = "<td>eloszka" . ($wynik) . "</td>\n";
             
             echo $komorka;
             
