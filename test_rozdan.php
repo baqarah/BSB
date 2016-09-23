@@ -39,7 +39,7 @@ $rozdanie->showRozdanie();
      };
 
      document.getElementById("text").innerHTML = "elo";
-     xhttp.open("GET", "test_ajax.txt", true);
+     xhttp.open("GET", "http://www.w3schools.com/ajax/ajax_info.txt", true);
      xhttp.send();
  
  }
