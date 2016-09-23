@@ -7,17 +7,16 @@ $h = $this->getHits();
 
     <?php 
     for ($i = 0; $i <= 4; $i++) {
-        echo "<tr>";
-
+        echo "<tr>\n";
+        
+        
         for ($y = 0; $y <= 4; $y++) {
-            $komorka = "<td>"
-            . $i * 5 + $y 
-            ."</td>";
+            $komorka = "<td>" . $i * 5 + $y ."</td>\n";
 
             echo $komorka;
         }
         
-        echo "</tr>";
+        echo "</tr>\n";
     }
     ?>
 
