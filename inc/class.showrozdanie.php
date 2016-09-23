@@ -11,11 +11,19 @@ $h = $this->getHits();
         
         
         for ($y = 0; $y <= 4; $y++) {
+            
             $wynik = ($i * 5) + $y;
-            $komorka = "<td>eloszka" . ($wynik) . "</td>\n";
             
+            if ($h[$wynik) == 0) {
+                $opentag = '<td bgcolor="white">';
+            } else {
+                $opentag = '<td bgcolor="red">';
+            }
+
+            $text = $a[$wynik];
+            $komorka = $opentag . $text . "</td>\n";
             echo $komorka;
-            
+                
         }
         
         echo "</tr>\n";
