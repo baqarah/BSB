@@ -24,10 +24,12 @@ $rozdanie->showRozdanie();
      var xhttp;
      if (window.XMLHttpRequest) {
          xhttp = new XMLHttpRequest();
+         alert("chrome");
      } else {
          xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+         alert("windoza");
      }
-
+     
      xhttp.onreadystatechange = function() {
          if (this.readyState == 4 && this.status == 200) {
              document.getElementById("text").innerHTML = this.responseText;
