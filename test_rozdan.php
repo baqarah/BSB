@@ -16,15 +16,15 @@ $rozdanie->showRozdanie();
 
 
 ?>
-<button type="button" onlick="eskuel()" >klikmnie</button>
+<button type="button" onlick="funsql()" >klikmnie</button>
 <p><span id="text" >UMCUMSCUMSC</span></p>
 <script>
- function eskuel() {
-     var xhttp;
+ function funsql() {
      document.getElementById("text").innerHTML = "kurwa, dzialaj";
  }
 </script>
 <!-- 
+     var xhttp;
      if (window.XMLHttpRequest) {
          xhttp = new XMLHttpRequest();
      } else {
