@@ -19,7 +19,8 @@ class Rozdanie
         
         //$sql = "SELECT r.ID_BS id, r.CzyTrafione hit, s.BSText txt FROM LinieRozdan as r JOIN Bshits as s WHERE ID_Rozdanie = " . $id_rozdanie;  
         $sql = "SELECT r.PoleRozdania pole, r.ID_BS id, r.CzyTrafione hit, s.BSText txt " 
-              ."FROM BSB.LinieRozdan as r JOIN BSB.BShits as s ON r.ID_BS = s.ID_BS WHERE r.ID_Rozdanie = " . $id_rozdanie;
+              ."FROM BSB.LinieRozdan as r JOIN BSB.BShits as s ON r.ID_BS = s.ID_BS WHERE r.ID_Rozdanie = " . $id_rozdanie
+              ." ORDER BY pole ASC";
         $rozdanie_info = $this->_db->query($sql);
         
         while ($row = $rozdanie_info->fetch_assoc()) {
@@ -47,7 +48,11 @@ class Rozdanie
 
     public function showRozdanie()
     {
-        
+        $html = <<< 'EOD'
+        hello
+        EOD;
+
+        return $html;
     }
 
     

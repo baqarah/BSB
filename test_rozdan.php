@@ -11,6 +11,7 @@ $rozdanie = new Rozdanie($db, 42);
 print_r($rozdanie->getHits());
 print_r($rozdanie->getTxts());
 print_r($rozdanie->getIDTxts());
-
+echo "<br>";
+echo $rozdanie->showRozdanie();
 
 ?>
