@@ -14,16 +14,16 @@ $h = $this->getHits();
             
             $wynik = ($i * 5) + $y;
             
-            if ($h[$wynik) == 0) {
+            if ($h[$wynik] == 0) {
                 $opentag = '<td bgcolor="white">';
             } else {
                 $opentag = '<td bgcolor="red">';
             }
-
+            
             $text = $a[$wynik];
             $komorka = $opentag . $text . "</td>\n";
             echo $komorka;
-                
+            
         }
         
         echo "</tr>\n";
