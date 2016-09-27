@@ -44,7 +44,7 @@ function koloruj(objekt) {
      for (var i = 0; i < table.rows.length; i++) {
 	for (var j = 0; j < table.rows[i].cells.length; j++) {
 		//table.rows[i].cells[j].innerHTML = i + " " + j;	
-	    if (wynik[i][j] == 1) {
+	    if (wynik[j][i] == 1) {
 	        table.rows[i].cells[j].style.background = "red";
 	    } else {
 	        table.rows[i].cells[j].style.background = "white";
