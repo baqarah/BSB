@@ -23,7 +23,7 @@ if (table != null) {
                      alert("wygrales!!!!");
                  }
 
-                 //funsql(this);
+                 funsql(this);
 	     };
 	 };			
      }
@@ -121,14 +121,15 @@ function funsql(objekt) {
     
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("text").innerHTML = this.responseText;
+            objekt.innerHTML = this.responseText;
          }
     };
 
-    if wynik[x][y] ==
+    var poleid = x * 5 + y;
+    var fullurl = "wynikrozdania.php?idrozdania=" + 43 + "&pole=" + poleid + "&wynik=" + wynik[x][y];
     
-    objekt.innerHTML = "tutaj ma wyladowac";
-    xhttp.open("GET", "test_ajax.php", true);
+    objekt.innerHTML = "tutaj ma wyladowac wynikrozdania";
+    xhttp.open("GET", fullurl, true);
     xhttp.send();
     
 }
