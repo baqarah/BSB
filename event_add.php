@@ -59,7 +59,7 @@ if (empty($_POST["eventnazwa"]) || empty($_POST["start"]) || empty($_POST["konie
 
 if (!empty($_POST["eventnazwa"]) && !empty($_POST["start"]) && !empty($_POST["koniec"])) {
     include_once $pth . "/inc/class.events.inc.php";
-    $events = new Events($db);
+    $events = new Events($db, $_SESSION['username']);
     echo $events->createEvent();
 }
 
