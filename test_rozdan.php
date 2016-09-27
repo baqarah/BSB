@@ -20,27 +20,6 @@ $rozdanie->showRozdanie();
 
 <button type="button" onclick="funsql();" >klikmnie</button>
 <p><span id="text" >UMCUMSCUMSC</span></p>
-<script>
- function funsql() {
-     var xhttp;
-         
-     if (window.XMLHttpRequest) {
-         xhttp = new XMLHttpRequest();
-     } else {
-         xhttp = new ActiveXObject("Microsoft.XMLHTTP");
-     }
-     
-     xhttp.onreadystatechange = function() {
-         if (this.readyState == 4 && this.status == 200) {
-             document.getElementById("text").innerHTML = this.responseText;
-         }
-     };
+<script src ="/common/script.js"></script>
 
-     document.getElementById("text").innerHTML = "tutaj ma wyladowac";
-     xhttp.open("GET", "test_ajax.php?string=hejka", true);
-     xhttp.send();
- 
- }
-
-</script>
 
