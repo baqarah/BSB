@@ -8,6 +8,7 @@ class Rozdanie
     private $_txts = array();
     private $_idtxts = array();
     private $_hits = array();
+    private $_id_rozdanie;
     
     
     public function __construct($db = NULL, $id_rozdanie)
@@ -17,7 +18,8 @@ class Rozdanie
         } else {
             $this->_db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         }        
-        
+
+        $this->_id_rozdanie = $id_rozdanie;
         $this->_sqlrefresh = "SELECT r.PoleRozdania pole, r.ID_BS id, r.CzyTrafione hit, s.BSText txt " 
                             ."FROM BSB.LinieRozdan as r JOIN BSB.BShits as s ON r.ID_BS = s.ID_BS WHERE r.ID_Rozdanie = " . $id_rozdanie
                             ." ORDER BY pole ASC";
@@ -35,6 +37,12 @@ class Rozdanie
             $this->_idtxts[] = $row['id'];
             $this->_hits[] = $row['hit'];
         }
+    }
+
+    public function changeHit($pole, $wynik)
+    {
+        $sql = "UPDATE BSB.LinieRozdan SET CzyTrafione=" . $wynik . " WHERE PoleRozdania=" . $pole . " AND ID_Rozdanie=" . $this->_id_rozdanie;
+        $this->_db->query($sql);
     }
 
     public function getHits()
