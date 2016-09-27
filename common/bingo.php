@@ -26,6 +26,7 @@ if ($_SESSION['LoggedIn'] == 1) {
 } 
 ?>
 <script>
+ var id_rozdanie = <?php echo $next_event; ?>
  var wynik =[
      [<?php echo $h[0] . "," . $h[1] . "," . $h[2] . "," . $h[3] . "," . $h[4]; ?>],
      [<?php echo $h[5] . "," . $h[6] . "," . $h[7] . "," . $h[8] . "," . $h[9]; ?>],
