@@ -31,12 +31,12 @@ class Events
               ." AND e.EventStart > CURDATE() ORDER BY e.EventStart DESC";
         $result = $this->_db->query($sql);
 
-        if (!$result) {
+        //if (!$result) {
             $row = $result->fetch_assoc();
             $n = $row['IDroz'];
-        } else {
-            $n = "no events";
-        }
+        //} else {
+        //    $n = "no events";
+        //}
         
         return $n;
     }
