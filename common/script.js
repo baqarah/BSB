@@ -34,17 +34,17 @@ function koloruj(objekt) {
      var y = objekt.parentNode.rowIndex;
 
      if (x != 2 || y != 2) {
-	 if (wynik[x][y] == 0) {
-             wynik[x][y] = 1;
+	 if (wynik[y][x] == 0) {
+             wynik[y][x] = 1;
 	 } else {
-	     wynik[x][y] = 0;
+	     wynik[y][x] = 0;
 	 }
      }
 	
      for (var i = 0; i < table.rows.length; i++) {
 	for (var j = 0; j < table.rows[i].cells.length; j++) {
 		//table.rows[i].cells[j].innerHTML = i + " " + j;	
-	    if (wynik[j][i] == 1) {
+	    if (wynik[i][j] == 1) {
 	        table.rows[i].cells[j].style.background = "red";
 	    } else {
 	        table.rows[i].cells[j].style.background = "white";
