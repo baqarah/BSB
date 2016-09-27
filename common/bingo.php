@@ -14,7 +14,15 @@ if ($_SESSION['LoggedIn'] == 1) {
     $rozdanie->showRozdanie();
 } 
 ?>
-
-<script src = "/common/script.js"></script>
+<script>
+ var wynik =[
+     [0,0,0,0,0],
+     [0,0,0,0,0],
+     [0,0,1,0,0],
+     [0,0,0,0,0],
+     [0,0,0,0,0]
+ ]; 
+</script>
+<script type="text/javascript" src = "/common/script.js"></script>
 
 <?php include_once $pth . "/common/footer.php"; ?>

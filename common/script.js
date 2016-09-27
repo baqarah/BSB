@@ -1,10 +1,10 @@
-var wynik =[
+/*var wynik =[
 [0,0,0,0,0],
 [0,0,0,0,0],
 [0,0,1,0,0],
 [0,0,0,0,0],
 [0,0,0,0,0]
-];
+];*/
 
 var wygrana = false;
 var wygranaAlerted = false;
