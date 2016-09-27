@@ -14,13 +14,15 @@ include_once $pth . "/inc/class.rozdanie.inc.php";
 if ($_SESSION['LoggedIn'] == 1) { 
 
     $events = new Events($db, $_SESSION['Username']);
-    $next_event = $events->getNextEvent();
+    $next_event = $events->getNextRozdanie();
+
     //include_once $pth . "/common/tabela.php";
     echo $next_event;
-    $rozdanie = new Rozdanie($db, $next_event);
-    $rozdanie->showRozdanie();
-
-    $h = $rozdanie->getHits();
+    if ($next_event != "no events") {
+        $rozdanie = new Rozdanie($db, $next_event);
+        $rozdanie->showRozdanie();
+        $h = $rozdanie->getHits();
+    }
 } 
 ?>
 <script>
