@@ -163,7 +163,7 @@ EOT;
         //$sql = "INSERT INTO Events_Rozdanie(ID_Event, ID_Rozdanie) VALUES (" . $id . ", " . $last_id . ")";
         //$result = $this->_db->query($sql);
         
-        echo $sql;
+        //echo $sql;
         
         $this->rngRozdanie($last_id);//losowanie rozdania bedzie tutaj!
         
@@ -226,7 +226,7 @@ EOT;
             $sql = "INSERT INTO LinieRozdan(ID_Rozdanie, PoleRozdania, ID_BS, CzyTrafione) VALUES("
                   . $id_rozdanie . ", " . $z . ", " . $rngArray[$y] . ", " . $hit . ")"; 
             $this->_db->query($sql);
-            echo $sql . "\n";
+            //echo $sql . "\n";
         }
 
         //return $tempstring;
