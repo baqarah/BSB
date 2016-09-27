@@ -22,6 +22,18 @@ class Events
         $this->_userid = $row['UserID'];
     }
 
+
+    public function getNext()
+    {
+        $sql = "SELECT DISTINCT e.ID_Event as IDs "
+              ."FROM Events e, Rozdanie r "
+              ."WHERE e.ID_Event = r.ID_Event "
+              ."AND e.Aktywny = 1 AND r.UserID =" . $this->_userid;
+        
+        return $n;
+    }
+
+    
     public function getPartList()
     {
         $sql = "SELECT DISTINCT e.ID_Event as IDs "
@@ -90,9 +102,15 @@ class Events
             $sql = "INSERT INTO Events(EventNazwa, EventStart, EventEnd, Aktywny)"
                  . "VALUES ('" . $n . "', '" . $s . "', '" . $k . "',1)";
             $result = $this->_db->query($sql);
+
+            $new_event_id = $this->_db->insert_id;
+            $new_rozdanie_id = $this->joinEvent($new_event_id);
+            
+
             return 'Event "' . $n . '" added. <br> Well done, you.';
         }
 
+        
         // --- TUTAJ TRZEBA DODAC AUTO LOSOWANIE ROZDANIA
         
     }
@@ -139,7 +157,7 @@ EOT;
         
         echo $sql;
         
-        //losowanie rozdania bedzie tutaj!
+        $this->rngRozdanie($last_id);//losowanie rozdania bedzie tutaj!
         
         return $last_id;
     }
