@@ -47,7 +47,7 @@ function koloruj(objekt) {
 	    if (wynik[i][j] == 1) {
 	        table.rows[j].cells[i].style.background = "red";
 	    } else {
-	        table.rows[j].cells[i].style.background = "";
+	        table.rows[j].cells[i].style.background = "white";
 	    }
 	}			
      }
