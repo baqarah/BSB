@@ -133,6 +133,3 @@ function funsql(objekt) {
     xhttp.send();
     
 }
-
-
-}
