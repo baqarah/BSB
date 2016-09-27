@@ -5,13 +5,19 @@ $pageTitle = "Tabela";
 include_once $pth . "/common/base.php";
 //include_once $pth . "/common/cookie.php";
 include_once $pth . "/common/header.php";
+include_once $pth . "inc/class.events.inc.php";
 include_once $pth . "/inc/class.rozdanie.inc.php";
 
 
 
+
 if ($_SESSION['LoggedIn'] == 1) { 
+
+    $events = new Events($db, $_SESSION['Username']);
+    $next_event = $events->getNextEvent();
     //include_once $pth . "/common/tabela.php";
-    $rozdanie = new Rozdanie($db, 43);
+    echo $next_event;
+    $rozdanie = new Rozdanie($db, $next_event);
     $rozdanie->showRozdanie();
 
     $h = $rozdanie->getHits();
