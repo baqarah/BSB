@@ -58,8 +58,7 @@ class BSBUsers
         } else {
             return FALSE;
         }
-        
-        
+               
     }
     
 }

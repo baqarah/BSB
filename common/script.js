@@ -125,7 +125,7 @@ function funsql(objekt) {
          }
     };
 
-    var poleid = x * 5 + y;
+    var poleid = y * 5 + x;
     var fullurl = "wynikrozdania.php?idrozdania=" + 43 + "&pole=" + poleid + "&wynik=" + wynik[x][y];
     
     objekt.innerHTML = "tutaj ma wyladowac wynikrozdania";
