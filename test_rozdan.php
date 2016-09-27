@@ -37,7 +37,7 @@ $rozdanie->showRozdanie();
      };
 
      document.getElementById("text").innerHTML = "tutaj ma wyladowac";
-     xhttp.open("GET", "test_ajax.php", true);
+     xhttp.open("GET", "test_ajax.php?string=hejka", true);
      xhttp.send();
  
  }

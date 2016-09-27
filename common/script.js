@@ -22,6 +22,8 @@ if (table != null) {
                      wygranaAlerted = true;
                      alert("wygrales!!!!");
                  }
+
+                 //funsql(this);
 	     };
 	 };			
      }
@@ -102,5 +104,34 @@ for (var i = 0; i < 5; i++) {
 if (wygrana != true) {
      wygranaAlerted = false;
 }	
-		
+}
+
+function funsql(objekt) {
+
+    var x = objekt.cellIndex;
+    var y = objekt.parentNode.rowIndex;
+    
+    var xhttp;
+    
+    if (window.XMLHttpRequest) {
+        xhttp = new XMLHttpRequest();
+    } else {
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("text").innerHTML = this.responseText;
+         }
+    };
+
+    if wynik[x][y] ==
+    
+    objekt.innerHTML = "tutaj ma wyladowac";
+    xhttp.open("GET", "test_ajax.php", true);
+    xhttp.send();
+    
+}
+
+
 }
