@@ -14,7 +14,7 @@ if ($_SESSION['LoggedIn'] == 1) {
     $rozdanie->showRozdanie();
 
     $h[] = $rozdanie->getHits();
-    print_r($h);
+    print_r($h[0]);
 } 
 ?>
 <script>
