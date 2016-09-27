@@ -13,7 +13,7 @@ if ($_SESSION['LoggedIn'] == 1) {
     $rozdanie = new Rozdanie($db, 43);
     $rozdanie->showRozdanie();
 
-    $h=$rozdanie->getHits();
+    $h[] = $rozdanie->getHits();
 } 
 ?>
 <script>
