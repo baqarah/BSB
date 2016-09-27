@@ -28,7 +28,7 @@ class Events
         $sql = "SELECT DISTINCT r.ID_Rozdanie as IDroz, e.ID_Event as IDeve "
               ."FROM Events e, Rozdanie r "
               ."WHERE e.ID_Event = r.ID_Event AND e.Aktywny = 1 AND r.UserID = " . $this->_userid
-              ."AND e.EventStart < CURDATE() ORDER BY EventStart DESC";
+              ." AND e.EventStart > CURDATE() ORDER BY e.EventStart DESC";
         $result = $this->_db->query($sql);
         $row = $result->fetch_assoc();
         $n = $row['IDroz'];
