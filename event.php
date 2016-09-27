@@ -11,7 +11,7 @@ $events = new Events($db, $_SESSION['Username']);
 if (!empty($_POST['eventjoinid'])) {
     echo "<h>";
     $id_rozdanie = $events->joinEvent($_POST['eventjoinid']);
-    $events->rngRozdanie($id_rozdanie);
+    //$events->rngRozdanie($id_rozdanie);
     echo "</h>";
 }
 
