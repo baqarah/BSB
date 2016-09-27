@@ -8,13 +8,13 @@ include_once $pth . "/common/header.php";
 include_once $pth . "/inc/class.rozdanie.inc.php";
 
 
+
 if ($_SESSION['LoggedIn'] == 1) { 
     //include_once $pth . "/common/tabela.php";
     $rozdanie = new Rozdanie($db, 43);
     $rozdanie->showRozdanie();
 
     $h[] = $rozdanie->getHits();
-    print_r($h[0]);
 } 
 ?>
 <script>
