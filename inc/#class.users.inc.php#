@@ -1,0 +1,66 @@
+<?php
+
+class BSBUsers
+{g
+    //Database object:
+    private $_db;
+
+    //checks for db object and creates one if not found
+    public function __construct($db=NULL)
+    {
+        if(is_object($db)) {
+            $this->_db = $db;
+        } else {
+            $this->_db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+            //echo "connected";
+        } 
+    }     
+     
+    public function createAccount()
+    {
+        $u = trim($_POST["username"]);
+        $p = $_POST["password"];
+        
+        $sql = "SELECT COUNT(UserName) as theCount FROM Users WHERE UserName='" . $u . "'";
+        //echo $sql; 
+        $result = $this->_db->query($sql);
+        
+            
+        $row = $result->fetch_assoc();
+        if($row['theCount']!=0){
+            return "<h2> Error</h2>"
+                 . "<p> Your account name is already in use. </p>"
+                 . "<p> Try again. Or not.<br> I am not your supervisor </p>";
+        } else {
+            
+            $sql = "INSERT INTO Users(UserName, Password) VALUES('" .$u. "','" .$p. "' )";
+            $result = $this->_db->query($sql);
+            return 'User "' .$u. '"  added. <br> Well done, you.';
+        }    
+    }
+
+    public function accountLogin()
+    {
+
+        $u = trim($_POST["username"]);
+        $p = trim($_POST["password"]);
+
+        $sql = "SELECT COUNT(UserName) as theCount 
+                FROM Users 
+                WHERE UserName='" . $u . "' AND Password='" . $p . "'";
+        $result = $this->_db->query($sql);
+        $row = $result->fetch_assoc();
+
+        if($row['theCount']==1) {
+            $_SESSION['Username'] = htmlentities($_POST['username'], ENT_QUOTES);
+            $_SESSION['LoggedIn'] = 1;
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+        
+        
+    }
+    
+}
+?>
