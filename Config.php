@@ -1,3 +1,6 @@
+//costutaj sie zmineiclo
+
+
 <?php
 $servername = '89.77.118.160';
 $DB_USERNAME = 'user';
